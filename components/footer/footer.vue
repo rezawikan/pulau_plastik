@@ -4,7 +4,7 @@
       <b-row align-h="center" align-v="center">
         <b-col cols="12" sm="12" md="12" lg="4" xl="4">
           <div class="logo">
-            <img class="img-lg" src="http://pulauplastik.org/img/pulau_plastik_logo_black.png" alt="">
+            <img class="img-lg" src="~/assets/img/pulau_plastik_logo_black.png" alt="">
           </div>
           <p class="text-center">Pulau Plastik merupakan kolaborasi aksi antara Kopernik dan Akarumput.</p>
         </b-col>
