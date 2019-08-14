@@ -192,6 +192,15 @@ import { mapActions } from 'vuex'
 export default {
   layout: 'general',
 
+  head () {
+    return {
+      title: `Pulau Plastik - ${ this.$t('pages.sub.organize')}`,
+      meta: [
+        // { hid: 'description', name: 'description', content: `${ this.$t('content.home.description_text_1')}` }
+      ]
+    }
+  },
+
   data() {
     return {
       navbarHeight: 0,

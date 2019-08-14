@@ -16,6 +16,15 @@ import { mapGetters } from 'vuex'
 export default {
   layout: 'general',
 
+  head () {
+    return {
+      title: this.filterTitle[0],
+      meta: [
+        // { hid: 'description', name: 'description', content: `${ this.$t('content.home.description_text_1')}` }
+      ]
+    }
+  },
+
   computed: {
     filterTitle() {
       return this.data.translations.filter(x => {

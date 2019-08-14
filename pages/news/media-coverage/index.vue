@@ -26,6 +26,16 @@ import queryString from 'query-string'
 import MediaCoverageThumbnail from '@/components/part/media-coverage/MediaCoverageThumbnail'
 export default {
   layout: 'general',
+
+  head () {
+    return {
+      title: `Pulau Plastik - ${ this.$t('pages.sub.media_coverage')}`,
+      meta: [
+        // { hid: 'description', name: 'description', content: `${ this.$t('content.home.description_text_1')}` }
+      ]
+    }
+  },
+
   components : {
     MediaCoverageThumbnail
   },

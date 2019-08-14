@@ -40,7 +40,16 @@
 
 <script>
 export default {
-  layout: 'general'
+  layout: 'general',
+
+  head () {
+    return {
+      title: `Pulau Plastik - ${ this.$t('pages.sub.support_our_cause')}`,
+      meta: [
+        // { hid: 'description', name: 'description', content: `${ this.$t('content.home.description_text_1')}` }
+      ]
+    }
+  },
 }
 </script>
 

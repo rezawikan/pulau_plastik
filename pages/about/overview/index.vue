@@ -86,6 +86,15 @@ import queryString from 'query-string'
 export default {
   layout: 'general',
 
+  head () {
+    return {
+      title: `Pulau Plastik - ${ this.$t('pages.sub.overview')}`,
+      meta: [
+        // { hid: 'description', name: 'description', content: `${ this.$t('content.home.description_text_1')}` }
+      ]
+    }
+  },
+
   data() {
     return {
       episodes: [],

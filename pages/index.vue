@@ -191,13 +191,22 @@ export default {
     Logo
   },
 
+  head () {
+    return {
+      title: 'Pulau Plastik',
+      meta: [
+        { hid: 'description', name: 'description', content: `${ this.$t('content.home.description_text_1')}` }
+      ]
+    }
+  },
+
   data() {
       return {
           disable3d: true,
           space: 380,
           autoplay: true,
           autoplayHoverPause: true,
-          instagram: []
+          instagram: [],
       }
   },
 

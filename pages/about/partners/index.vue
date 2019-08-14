@@ -26,7 +26,16 @@ import queryString from 'query-string'
 import PartnerThumbnail from '@/components/part/partner/PartnerThumbnail'
 export default {
   layout: 'general',
-  
+
+  head () {
+    return {
+      title: `Pulau Plastik - ${ this.$t('pages.sub.partners')}`,
+      meta: [
+        // { hid: 'description', name: 'description', content: `${ this.$t('content.home.description_text_1')}` }
+      ]
+    }
+  },
+
   components: {
       PartnerThumbnail
   },
