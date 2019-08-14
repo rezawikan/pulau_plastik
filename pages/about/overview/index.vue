@@ -52,38 +52,17 @@
       </b-row>
     </b-container>
 
-    <b-container class="p-3">
+    <b-container class="p-3" v-if="episodes.length > 0">
       <b-row align-h="center" align-v="center">
         <b-col cols="12">
           <p class="header-text">{{ $t('pages.sub.series') }}</p>
           <p>{{ $t('content.about.series.pre_text') }}</p>
         </b-col>
-        <b-col md="6" class="mt-3">
-          <div class="container-block-line container-height">
-            <p class="pre-text">Episode 1</p>
-            <p class="title-text">{{ $t('content.about.series.series_title_1') }}</p>
-            <p>{{ $t('content.about.series.series_description_1') }}</p>
-          </div>
-        </b-col>
-        <b-col md="6" class="mt-3">
-          <div class="container-block-line container-height">
-            <p class="pre-text">Episode 2</p>
-            <p class="title-text">{{ $t('content.about.series.series_title_2') }}</p>
-            <p>{{ $t('content.about.series.series_description_2') }}</p>
-          </div>
-        </b-col>
-        <b-col md="6" class="mt-3">
-          <div class="container-block-line container-height">
-            <p class="pre-text">Episode 3</p>
-            <p class="title-text">{{ $t('content.about.series.series_title_3') }}</p>
-            <p>{{ $t('content.about.series.series_description_3') }}</p>
-          </div>
-        </b-col>
-        <b-col md="6" class="mt-3">
-          <div class="container-block-line container-height">
-            <p class="pre-text">Episode 4</p>
-            <p class="title-text">{{ $t('content.about.series.series_title_4') }}</p>
-            <p>{{ $t('content.about.series.series_description_4') }}</p>
+        <b-col cols="12" lg="6" class="mt-3" v-for="(episode, index) in episodes" :key="index">
+          <div class="container-block-line">
+            <p class="pre-text">Episode {{ episode.order }}</p>
+            <p class="title-text">{{ episode.title }}</p>
+            <p>{{ episode.summary }}</p>
           </div>
         </b-col>
       </b-row>
@@ -103,11 +82,13 @@
 </template>
 
 <script>
+import queryString from 'query-string'
 export default {
   layout: 'general',
 
   data() {
     return {
+      episodes: [],
       visible: true,
       slides: [{
           image: 'https://via.placeholder.com/150'
@@ -119,6 +100,16 @@ export default {
           image: 'https://via.placeholder.com/150'
         }
       ]
+    }
+  },
+
+  async asyncData({ $axios, query, app }) {
+    let queries = Object.assign({}, query, {
+      locale: app.i18n.locale
+    })
+    let { data } = await $axios.$get(`/api/episode?${queryString.stringify({ ...queries })}`)
+    return {
+      episodes: data
     }
   }
 }

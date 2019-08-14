@@ -164,5 +164,10 @@ export default {
         dropdown_11: 'Ibu Seribu Pura (The Mother of a Thousand Temples)'
       }
     }
+  },
+  alert: {
+    title: 'Info',
+    text: 'File tidak tersedia',
+    close: 'Tutup'
   }
 }

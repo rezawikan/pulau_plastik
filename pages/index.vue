@@ -121,38 +121,20 @@
     </b-row>
   </b-container>
 
-  <b-container class="p-3">
+  <b-container class="p-3" v-if="testimonies.length > 0">
     <b-row align-v="center">
       <b-col cols="12" class="pb-3">
         <h6 class="text-center">{{ $t('content.general.testimonies')}}</h6>
       </b-col>
-      <b-col cols="12" sm="12" md="4" lg="4">
-        <div class="container-block-line-thumb">
-          <div class="thumb-container">
-            <p class="pre-text">20 May 2019</p>
-            <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            <!-- <p class="footer">Global Project Leader, Unilever</p> -->
-          </div>
-        </div>
-      </b-col>
-      <b-col cols="12" sm="12" md="4" lg ="4">
-        <div class="container-block-line-thumb">
-          <div class="thumb-container">
-            <p class="pre-text">20 May 2019</p>
-            <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            <!-- <p class="footer">Global Project Leader, Unilever</p> -->
-          </div>
-        </div>
-      </b-col>
-      <b-col cols="12" sm="12" md="4" lg ="4">
-        <div class="container-block-line-thumb">
-          <div class="thumb-container">
-            <p class="pre-text">20 May 2019</p>
-            <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            <!-- <p class="footer">Global Project Leader, Unilever</p> -->
-          </div>
-        </div>
-      </b-col>
+      <carousel-3d :disable3d="disable3d" :space="space" :autoplay="autoplay" :autoplayHoverPause="autoplayHoverPause" >
+          <slide v-for="(testimony, index) in testimonies" :index="index" :key="index">
+              <div class="thumb-container">
+                <!-- <p class="pre-text">20 May 2019</p> -->
+                <p class="text">{{ testimony.summary }}</p>
+                <p class="footer">{{ testimony.position }}, {{ testimony.name }}</p>
+              </div>
+          </slide>
+      </carousel-3d>
     </b-row>
   </b-container>
 
@@ -202,6 +184,7 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   layout: 'default',
   components: {
@@ -210,6 +193,10 @@ export default {
 
   data() {
       return {
+          disable3d: true,
+          space: 380,
+          autoplay: true,
+          autoplayHoverPause: true,
           instagram: []
       }
   },
@@ -220,19 +207,35 @@ export default {
     },
     markerInfoStyle() {
       return this.$el.offsetHeight;
-    }
+    },
+    ...mapGetters({
+      testimonies: 'testimonies/testimonies'
+    })
+  },
+
+  methods: {
+    ...mapActions({
+      getTestimonies: 'testimonies/getTestimonies'
+    })
+  },
+
+  created() {
+    let queries = Object.assign({}, this.$route.query, {
+      locale: this.$i18n.locale
+    })
+    this.getTestimonies(queries)
   },
 
   async asyncData({ app }) {
-    let data = await app.$axios.$get(`${process.env.INSTAGRAM_API}v1/users/self/media/recent/?access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}&count=12`)
+    let instagram = await app.$axios.$get(`${process.env.INSTAGRAM_API}v1/users/self/media/recent/?access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}&count=12`)
 
     return {
-      instagram: data.data
+      instagram: instagram.data
     }
   }
 }
 </script>
 
-<style>
+<style lang="css" scoped>
 
 </style>

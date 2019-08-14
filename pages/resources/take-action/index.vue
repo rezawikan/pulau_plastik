@@ -31,37 +31,41 @@
           <p>{{ $t('content.resources.take_action.question') }}</p>
         </b-col>
         <b-col cols="12" sm="12" md="6" lg="6">
-          <div class="container-block-line-thumb blur">
-            <nuxt-link to="/about">
+          <div class="container-block-line-thumb blur" @click.prevent="modal()">
+            <!-- <nuxt-link to="/about"> -->
             <img src="~/assets/img/poster.png" alt="Host A Screening">
             <p class="absolute-center-text text-center">Schools</p>
-            </nuxt-link>
+            <!-- </nuxt-link> -->
           </div>
         </b-col>
         <b-col cols="12" sm="12" md="6" lg="6">
-          <div class="container-block-line-thumb blur">
-            <nuxt-link to="/about">
+          <div class="container-block-line-thumb blur" @click.prevent="modal()">
+            <!-- <nuxt-link to="/about"> -->
             <img src="~/assets/img/poster.png" alt="Host A Screening">
             <p class="absolute-center-text text-center">Bussiness (Office/ Restarurants)</p>
-            </nuxt-link>
+            <!-- </nuxt-link> -->
           </div>
         </b-col>
         <b-col cols="12" sm="12" md="6" lg="6">
-          <div class="container-block-line-thumb blur">
-            <nuxt-link to="/about">
+          <div class="container-block-line-thumb blur" @click.prevent="modal()">
+            <!-- <nuxt-link to="/about"> -->
             <img src="~/assets/img/poster.png" alt="Host A Screening">
             <p class="absolute-center-text text-center">Villages</p>
-            </nuxt-link>
+            <!-- </nuxt-link> -->
           </div>
         </b-col>
         <b-col cols="12" sm="12" md="6" lg="6">
-          <div class="container-block-line-thumb blur">
-            <nuxt-link to="/about">
+          <div class="container-block-line-thumb blur" @click.prevent="modal()">
+            <!-- <nuxt-link to="/about"> -->
             <img src="~/assets/img/poster.png" alt="Host A Screening">
             <p class="absolute-center-text text-center">Households</p>
-            </nuxt-link>
+            <!-- </nuxt-link> -->
           </div>
         </b-col>
+
+        <!-- Dialog -->
+        <v-dialog/>
+
       </b-row>
     </b-container>
   </b-row>
@@ -70,7 +74,21 @@
 
 <script>
 export default {
-  layout: 'general'
+  layout: 'general',
+
+  methods: {
+    modal() {
+      this.$modal.show('dialog', {
+        title: `${ this.$t('alert.title')}`,
+        text: `${ this.$t('alert.text')}`,
+        buttons: [
+          {
+            title: `${ this.$t('alert.close')}`,
+          }
+       ]
+      })
+    }
+  }
 }
 </script>
 

@@ -62,6 +62,10 @@ export default {
       src: '@/plugins/vue-carousel-3d',
       ssr: false
     },
+    {
+      src: '@/plugins/vue-js-modal',
+      // ssr: false
+    },
     // {
     //   src: '@/plugins/vue-carousel',
     //   ssr: false
