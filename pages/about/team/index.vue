@@ -18,7 +18,7 @@
 
     <b-container class="p-3 mt-4">
       <b-row align-h="center">
-        <b-col sm="3">
+        <!-- <b-col sm="3">
           <div class="container-block">
             <div class="image-circle">
               <img src="~/assets/img/host-a-screening.png" class="rounded-circle" alt="">
@@ -26,70 +26,7 @@
             <p class="text-center team-name">Gede Robi (Navicula)</p>
             <p class="text-center position-team">Co-Creator</p>
           </div>
-        </b-col>
-        <b-col sm="3">
-          <div class="container-block">
-            <div class="image-circle">
-              <img src="~/assets/img/host-a-screening.png" class="rounded-circle" alt="">
-            </div>
-            <p class="text-center team-name">Gede Robi (Navicula)</p>
-            <p class="text-center position-team">Co-Creator</p>
-          </div>
-        </b-col>
-        <b-col sm="3">
-          <div class="container-block">
-            <div class="image-circle">
-              <img src="~/assets/img/host-a-screening.png" class="rounded-circle" alt="">
-            </div>
-            <p class="text-center team-name">Gede Robi (Navicula)</p>
-            <p class="text-center position-team">Co-Creator</p>
-          </div>
-        </b-col>
-        <b-col sm="3">
-          <div class="container-block">
-            <div class="image-circle">
-              <img src="~/assets/img/host-a-screening.png" class="rounded-circle" alt="">
-            </div>
-            <p class="text-center team-name">Gede Robi (Navicula)</p>
-            <p class="text-center position-team">Co-Creator</p>
-          </div>
-        </b-col>
-        <b-col sm="3">
-          <div class="container-block">
-            <div class="image-circle">
-              <img src="~/assets/img/host-a-screening.png" class="rounded-circle" alt="">
-            </div>
-            <p class="text-center team-name">Gede Robi (Navicula)</p>
-            <p class="text-center position-team">Co-Creator</p>
-          </div>
-        </b-col>
-        <b-col sm="3">
-          <div class="container-block">
-            <div class="image-circle">
-              <img src="~/assets/img/host-a-screening.png" class="rounded-circle" alt="">
-            </div>
-            <p class="text-center team-name">Gede Robi (Navicula)</p>
-            <p class="text-center position-team">Co-Creator</p>
-          </div>
-        </b-col>
-        <b-col sm="3">
-          <div class="container-block">
-            <div class="image-circle">
-              <img src="~/assets/img/host-a-screening.png" class="rounded-circle" alt="">
-            </div>
-            <p class="text-center team-name">Gede Robi (Navicula)</p>
-            <p class="text-center position-team">Co-Creator</p>
-          </div>
-        </b-col>
-        <b-col sm="3">
-          <div class="container-block">
-            <div class="image-circle">
-              <img src="~/assets/img/host-a-screening.png" class="rounded-circle" alt="">
-            </div>
-            <p class="text-center team-name">Gede Robi (Navicula)</p>
-            <p class="text-center position-team">Co-Creator</p>
-          </div>
-        </b-col>
+        </b-col> -->
       </b-row>
     </b-container>
   </b-row>
