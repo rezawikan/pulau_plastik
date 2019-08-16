@@ -66,20 +66,8 @@ export default {
       src: '@/plugins/vue-js-modal',
       // ssr: false
     },
-    // {
-    //   src: '@/plugins/vue-carousel',
-    //   ssr: false
-    // },
     {
       src: '@/plugins/vue-concise',
-      ssr: false
-    },
-    {
-      src: '@/plugins/vue-isotope',
-      ssr: false
-    },
-    {
-      src: '@/plugins/vue-imagesLoaded',
       ssr: false
     }
   ],
