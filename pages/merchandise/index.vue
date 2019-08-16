@@ -3,7 +3,7 @@
     <b-container fluid class="partscreen-img gap-fixed about">
       <b-row align-h="center" no-gutters>
         <b-col>
-          <img src="~/assets/img/header/news.jpg" class="" alt="Host A Screening">
+          <img src="~/assets/img/header/news.jpg" class="" alt="">
           <h3 class="absolute-center-btn text-center white-color">{{ $t('pages.sub.merchandise') }}</h3>
         </b-col>
       </b-row>

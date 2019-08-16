@@ -3,7 +3,7 @@
     <b-container fluid class="partscreen-img gap-fixed about">
       <b-row align-h="center" no-gutters>
         <b-col>
-          <img src="~/assets/img/header/resources.jpg" class="" alt="Host A Screening">
+          <img src="~/assets/img/header/resources.jpg" class="" alt="">
           <h3 class="absolute-center-btn text-center white-color">{{ $t('pages.resources') }}</h3>
           <div class="absolute-bottom navigation-btn">
             <b-nav tabs align="center">
