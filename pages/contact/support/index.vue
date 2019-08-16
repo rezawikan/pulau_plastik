@@ -24,6 +24,7 @@
             <p class="absolute-center-text text-center">{{ $t('content.button.text.donate')}}</p>
           </a>
           </div>
+          <p>{{ $t('content.support_our_cause.donate') }}</p>
         </b-col>
         <b-col cols="12" sm="12" md="6" lg="6">
           <div class="container-block-line-thumb blur">
@@ -32,6 +33,7 @@
             <p class="absolute-center-text text-center">{{ $t('content.button.text.buy')}}</p>
             </nuxt-link>
           </div>
+          <p>{{ $t('content.support_our_cause.merchandise') }}</p>
         </b-col>
       </b-row>
     </b-container>

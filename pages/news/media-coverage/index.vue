@@ -9,7 +9,7 @@
             <b-nav tabs align="center">
               <b-nav-item :href="localePath('news-blog')">{{ $t('pages.sub.blog') }}</b-nav-item>
               <b-nav-item active :href="localePath('news-media-coverage')">{{ $t('pages.sub.media_coverage') }}</b-nav-item>
-              <!-- <b-nav-item :href="localePath('news-gallery')">{{ $t('pages.sub.gallery') }}</b-nav-item> -->
+              <b-nav-item :href="localePath('news-gallery')">{{ $t('pages.sub.gallery') }}</b-nav-item>
             </b-nav>
           </div>
         </b-col>

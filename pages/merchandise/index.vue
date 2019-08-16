@@ -17,60 +17,23 @@
           <p>{{ $t('content.merchandise.description_text_2')}}</p>
           <p>{{ $t('content.merchandise.description_text_3')}}</p>
         </b-col>
-        <b-col cols="6" col-sm="12" >
-          <div class="container-block-line-thumb">
-            <img src="~/assets/img/poster.png" class="" alt="Host A Screening">
-            <div class="thumb-container">
-              <p class="title">Tas dari Koran</p>
-              <p>Tas kertas buatan tangan yang terbuat dari 100% limbah koran. Meski terbuat dari kertas, tas ini aman untuk membawa barang hingga 2 kg. Bahkan tas yang menggunakan bisban bisa membawa barang hingga 5 kg.</p>
-              <p>
-                Ukuran: 16 x 27 x 26 cm<br>
-                Harga: Rp5.000 / tas (min pesan 100 biji)<br>
-                Bahan: 100% limbah koran bekas, tas<br>
-                Penjual: Tut / Ubud / +62 857 9266 7005
-              </p>
-            </div>
-          </div>
-        </b-col>
-        <b-col cols="6" col-sm="12" >
-          <div class="container-block-line-thumb">
-            <img src="~/assets/img/poster.png" class="" alt="Host A Screening">
-            <div class="thumb-container">
-              <p class="title">Wadah Bungkus Daun Kelapa</p>
-              <p>Wadah yang ramah lingkungan ini terbuat dari daun kelapa yang dirangkai bersama. Wadah ini bisa bertahan hingga 3 hari.</p>
-              <p>
-                Dimensi: 22 x 5 cm<br>
-                Harga: Rp5.000 / biji<br>
-                Bahan: Daun Kelapa<br>
-                Penjual: Rani / Ubud / +62 812 3951 174
-              </p>
-            </div>
-          </div>
-        </b-col>
-        <b-col cols="6" col-sm="12" >
-          <div class="container-block-line-thumb">
-            <img src="~/assets/img/poster.png" class="" alt="Host A Screening">
-            <div class="thumb-container">
-              <p class="title">Alat Makan Bambu</p>
-              <p>Peralatan makan yang terbuat dari bambu adalah pilihan yang berkelanjutan bagi lingkungan karena tanaman bambu dapat tumbuh dalam kondisi apapun dan tumbuh hingga ukuran penuh dalam waktu 3-4 bulan. Alat makan ini mudah dibawa dan praktis digunakan.</p>
-              <p>
-                Bahan: 100% bambu<br>
-                Penjual: Yasminida / Bali / +62 812 3734 9205
-              </p>
-            </div>
-          </div>
-        </b-col>
       </b-row>
     </b-container>
+
+    <MerchandiseThumbnail :data="merchandise" :meta="meta"/>
 
   </div>
 </template>
 
 <script>
-
+import MerchandiseThumbnail from '@/components/part/merchandise/MerchandiseThumbnail'
 import queryString from 'query-string'
 export default {
   layout: 'general',
+
+  components: {
+    MerchandiseThumbnail
+  },
 
   head () {
     return {
@@ -80,6 +43,22 @@ export default {
       ]
     }
   },
+
+  data() {
+    return {
+      merchandise: [],
+      meta: []
+    }
+  },
+
+  async asyncData({ $axios, query, app }) {
+    let queries = Object.assign({}, query, { locale: app.i18n.locale })
+    let { data, meta } = await $axios.$get(`/api/merchandise?${queryString.stringify({ ...queries })}`)
+    return {
+      merchandise : data,
+      meta: meta
+    }
+  }
 
 }
 </script>

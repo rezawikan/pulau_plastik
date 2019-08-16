@@ -16,28 +16,19 @@
       </b-row>
     </b-container>
 
-    <b-container class="p-3 mt-2">
-      <b-row align-v="center">
-        <b-col cols="12">
-          <div class="center-text">
-            <no-ssr>
-              <isotope ref="grid" :options="options" :list="list" v-images-loaded:on.progress="layout" v-if="list.length">
-                <div v-for="(item, index) in list" :key="index" class="grid-item">
-                  <img :src="item.image" alt="">
-                </div>
-              </isotope>
-            </no-ssr>
-          </div>
-
-        </b-col>
-      </b-row>
-    </b-container>
+    <GalleryThumbnail :data="images" :meta="meta" />
   </div>
 </template>
 
 <script>
+import queryString from 'query-string'
+import GalleryThumbnail from '@/components/part/gallery/GalleryThumbnail'
 export default {
   layout: 'general',
+
+  components: {
+    GalleryThumbnail
+  },
 
   head () {
     return {
@@ -50,81 +41,15 @@ export default {
 
   data() {
     return {
-      list: [{
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, {
-        title: 'test',
-        image: 'https://via.placeholder.com/100'
-      }, ],
-      options: {
-        itemSelector: '.list-gallery',
-        layout: 'fitRows',
-        masonry: {
-          columnWidth: 50,
-          // horizontalOrder: true
-        }
-      }
+      images: []
     }
   },
 
-  methods: {
-    layout() {
-      this.$refs.grid.layout('masonry');
+  async asyncData({ $axios, query, app }) {
+    let { data, meta } = await $axios.$get(`/api/gallery?${queryString.stringify(query)}`)
+    return {
+      images : data,
+      meta: meta
     }
   }
 }

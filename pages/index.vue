@@ -90,34 +90,14 @@
       <b-col cols="12" class="pb-3">
         <h6 class="text-center">{{ $t('content.general.supported_by')}}</h6>
       </b-col>
-      <b-col cols="7" sm="3" md="3" lg="2">
+      <b-col cols="7" sm="3" md="3" lg="2" v-for="(supporter,index) in supporters" :key="index">
         <div class="partner">
-          <a href="https://www.thebodyshop.co.id/">
-            <img src="~/assets/img/supported/body-shop.png">
+          <a :href="supporter.link" target="_blank">
+            <img :src="supporter.image">
           </a>
         </div>
       </b-col>
-      <b-col cols="7" sm="3" md="3" lg="2">
-        <div class="partner">
-          <a href="https://www.fordfoundation.org/">
-            <img src="~/assets/img/supported/ford-foundation.png">
-          </a>
-        </div>
-      </b-col>
-      <b-col cols="7" sm="3" md="3" lg="2">
-        <div class="partner">
-          <a href="https://www.kemendagri.go.id/">
-            <img src="~/assets/img/supported/kemendagri.png">
-          </a>
-        </div>
-      </b-col>
-      <b-col cols="7" sm="3" md="3" lg="2">
-        <div class="partner">
-          <a href="https://www.nationalgeographic.com/">
-            <img src="~/assets/img/supported/nat-geo.png">
-          </a>
-        </div>
-      </b-col>
+
     </b-row>
   </b-container>
 
@@ -126,7 +106,7 @@
       <b-col cols="12" class="pb-3">
         <h6 class="text-center">{{ $t('content.general.testimonies')}}</h6>
       </b-col>
-      <carousel-3d :disable3d="disable3d" :space="space" :autoplay="autoplay" :autoplayHoverPause="autoplayHoverPause" >
+      <carousel-3d :disable3d="disable3d" :space="space" :autoplay="autoplay" :autoplayHoverPause="autoplayHoverPause" animationSpeed="1000" :autoplayTimeout="autoplayTimeout">
           <slide v-for="(testimony, index) in testimonies" :index="index" :key="index">
               <div class="thumb-container">
                 <!-- <p class="pre-text">20 May 2019</p> -->
@@ -206,6 +186,7 @@ export default {
           space: 380,
           autoplay: true,
           autoplayHoverPause: true,
+          autoplayTimeout: 5000,
           instagram: [],
       }
   },
@@ -218,21 +199,22 @@ export default {
       return this.$el.offsetHeight;
     },
     ...mapGetters({
-      testimonies: 'testimonies/testimonies'
+      testimonies: 'additional/testimonies',
+      supporters: 'additional/supporters'
     })
   },
 
   methods: {
     ...mapActions({
-      getTestimonies: 'testimonies/getTestimonies'
+      getTestimonies: 'additional/getTestimonies',
+      getSupporters: 'additional/getSupporters',
     })
   },
 
   created() {
-    let queries = Object.assign({}, this.$route.query, {
-      locale: this.$i18n.locale
-    })
+    let queries = { locale: this.$i18n.locale }
     this.getTestimonies(queries)
+    this.getSupporters(queries)
   },
 
   async asyncData({ app }) {

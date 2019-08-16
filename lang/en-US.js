@@ -63,16 +63,16 @@ export default {
       empty: 'Konten masih kosong, silahkan kembali di lain waktu'
     },
     home: {
-      description_text_1: 'Pulau Plastik merupakan sebuah kampanye kolaboratif yang menangani isu plastik sekali pakai di Bali dan sekitarnya. Pulau Plastik menggunakan budaya populer dalam bentuk kampanye media sosial, kumpulan video pendek, serta film layar lebar untuk meningkatkan kesadaran masyarakat tentang bahaya plastik sekali pakai, untuk mengubah perilaku masyarakat, serta menjadi sarana advokasi bagi perubahan.',
+      description_text_1: 'Pulau Plastik merupakan kampanye kolaboratif dalam menangani isu plastik sekali pakai di Bali dan sekitarnya. Pulau Plastik memanfaatkan budaya populer berupa kampanye media sosial, serial video pendek, dan film dokumenter untuk  meningkatkan kesadaran masyarakat tentang bahaya plastik sekali pakai, serta mengubah perilaku masyarakat, sekaligus mengadvokasi menuju perubahan yang berkelanjutan.',
       description_text_2: 'Saatnya beraksi, agar Bali tidak menjadi PULAU PLASTIK.',
-      description_text_3: 'Ayo bergabung bersama musisi dan aktivis Gede Robi dalam perjalanannya untuk secara mendalam melihat masalah sampah plastik di Bali, serta mengungkap fakta-fakta tentang bagaimana sampah plastik berakhir di tempat pembuangan sampah, laut, dan makanan kita!'
+      description_text_3: 'Ayo bergabung bersama musisi dan aktivis Gede Robi dalam perjalanannya menyoroti pencemaran sampah plastik di Bali, serta mengupas fakta di balik luapan sampah plastik yang berakhir di tempat pembuangan sampah, laut, dan makanan kita!'
     },
     about: {
       campaign: {
-        overview_1: 'Pulau Plastik merupakan sebuah kampanye kolaboratif yang menangani isu plastik sekali pakai di Bali dan sekitarnya. Pulau Plastik menggunakan budaya populer dalam bentuk kampanye media sosial, kumpulan video pendek, serta film layar lebar untuk meningkatkan kesadaran masyarakat tentang bahaya plastik sekali pakai, untuk mengubah perilaku masyarakat, serta menjadi sarana advokasi bagi perubahan.',
-        overview_2: 'Melalui acara pemutaran film Pulau Plastik, dan melalui distribusi konten Pulau Plastik, tujuan utama dari kampanye ini adalah untuk:',
-        list_1: 'Mengubah perilaku masyarakat agar masyarakat menolak, mengurangi, menggunakan ulang, serta mendaur ulang',
-        list_2: 'Mendukung implementasi kebijakan pemerintah Bali terkait plastik sekali pakai',
+        overview_1: 'Pulau Plastik merupakan kampanye kolaboratif dalam menangani isu plastik sekali pakai di Bali dan sekitarnya. Pulau Plastik memanfaatkan budaya populer berupa kampanye media sosial, serial video pendek, dan film dokumenter untuk meningkatkan kesadaran masyarakat tentang bahaya plastik sekali pakai, serta mengubah perilaku masyarakat, sekaligus mengadvokasikan perubahan yang berkelanjutan',
+        overview_2: 'Melalui pemutaran film dan distribusi program Pulau Plastik ini, diharapakan dapat mencapai tujuan utama, di antaranya:',
+        list_1: 'Mengubah perilaku masyarakat agar mampu menolak, mengurangi, menggunakan ulang, serta mendaur ulang',
+        list_2: 'Mendukung implementasi kebijakan pemerintah Bali terkait pelarangan plastik sekali pakai secara berkelanjutan',
         overview_3: '',
         overview_4: 'Episode pilot',
         overview_5: 'Pulau Plastik telah ditayangkan oleh lebih dari 50 komunitas di berbagai kegiatan di Bali, Lombok, Jawa, Sumatera, Sulawesi, Timor, dan Papua.',
@@ -80,13 +80,13 @@ export default {
         // overview_7: 'through events in Bali, Lombok, Java, Sumatera, Sulawesi, Timor, and Papua.'
       },
       film: {
-        pre_text: 'Sebuah film panjang yang dipandu oleh Gede Robi dari grup band asal Bali, Navicula, yang menekankan pada pencemaran plastik di Bali serta mengungkap fakta-fakta di balik meluapnya limbah plastik yang pada akhirnya memenuhi Tempat Pembuangan Akhir, serta mencemari laut dan makanan kita. Saat ini, film layar lebar Pulau Plastik masih dalam proses produksi.'
+        pre_text: 'Sebuah film panjang yang dipandu oleh Gede Robi, aktivis sekaligus musisi, Navicula, yang menyoroti pencemaran sampah plastik di Bali, serta mengupas fakta di balik luapan sampah plastik yang berakhir di tempat pembuangan sampah, laut, dan makanan kita.'
       },
       psas: {
-        pre_text: 'Pulau Plastik memproduksi Iklan Layanan Masyarakat (ILM) dengan ajakan untuk melakukan tindakan konkret mengurangi plastik sekali pakai.'
+        pre_text: 'Pulau Plastik memproduksi Iklan Layanan Masyarakat (ILM) untuk mendorong keterlibatan dan tindakan nyata publik dalam mengurangi penggunaan plastik sekali pakai.'
       },
       series: {
-        pre_text: 'Pulau Plastik mengembangkan empat video serial untuk kegiatan pemutaran film yang menyasar masyarakat Bali sebagai audiensnya. Tiap episodenya berdurasi 20 menit dan mencakup isu seputar plastik sekali pakai, termasuk di dalamnya mikroplastik, pemilahan dan pembuangan sampah rumah tangga, kebijakan pemerintah, serta industri pangan dan perhotelan. Hubungan dengan filosofi serta kepercayaan masyarakat Bali juga dibahas dalam kaitannya dengan plastik sekali pakai. Tiap episodenya menyajikan rekomendasi yang realistis yang mengajak para audiensnya untuk mengurangi plastik sekali pakai.',
+        pre_text: 'Pulau Plastik memproduksi 4 (empat) episode untuk meningkatkan wawasan serta pengetahuan masyarakat Bali terhadap dampak buruk PSP. Tiap episodenya berdurasi 20 menit dan mencakup isu seputar plastik sekali pakai, seperti: mikroplastik, pemilahan dan pembuangan sampah rumah tangga, kebijakan pemerintah, serta industri pangan dan perhotelan. Hubungan filosofi dan kepercayaan masyarakat Bali turut dibahas dalam kaitannya dengan plastik sekali pakai. Tiap episodenya menyajikan rekomendasi yang realistis serta mengajak para pemirsanya untuk mengurangi penggunaan plastik sekali pakai.',
         series_title_1: 'Samudra Kertih (Dalam Harmoni dengan Laut Kita)',
         series_description_1: 'Plastik telah mengontaminasi lingkungan alam di seluruh dunia. Di berbagai komunitas di pesisir-pesisir Indonesia, kami menyelidiki bagaimana mikroplastik telah memasuki rantai makanan kita lewat hidangan laut yang kita makan. Mikroplastik tidak hanya terurai melalui produk plastik yang kita gunakan, tetapi mikroplastik juga terurai lewat produk-produk yang mengandung microbeads. Apakah yang dapat dilakukan oleh perusahaan-perusahaan untuk lebih mengutamakan kehidupan keberlanjutan dan memprioritaskan planet bumi ketimbang profit?',
         series_title_2: 'Karmaphala (Konsekuensi dari Aksi Kita)',
@@ -98,17 +98,17 @@ export default {
       }
     },
     screenings: {
-      upcomming: 'Saatnya beraksi dengan mengikuti acara pemutaran film selanjutnya!'
+      upcomming: 'Mari menjadi bagian dari solusi! Hadiri acara pemutaran film selanjutnya!'
     },
     resources: {
       take_action: {
-        description_text_1: 'Panduan Aksi ini berisi langkah-langkah konkret yang dapat kamu ambil untuk mengatasi permasalahan plastik! Kami juga telah mempersiapkan beberapa pertanyaan untuk menjadi bahan refleksi sebelum kamu mulai membaca dokumen panduan ini. Tidak ada jawaban benar atau salah, pertanyaan ini diajukan sebagai bahan diskusi.',
-        list_1: 'Apa sebenarnya masalah plastik itu, dan mengapa hal tersebut menjadi penting?',
-        list_2: 'Benda apa yang terbuat dari plastik yang paling sering kamu gunakan sehari-hari? Dapatkah kamu mencari alternatif terhadap benda tersebut? Jika tidak, apa tindakanmu dalam mengurangi penggunaan plastik?',
-        list_3: 'Apakah daur ulang merupakan solusi terbaik dari masalah limbah plastik? Diskusikan.',
-        list_4: 'Apakah ada cara yang lebih baik dalam mengatasi masalah tersebut? Diskusikan.',
+        description_text_1: 'Panduan Aksi ini berisi langkah-langkah nyata yang dapat kamu lakukan dalam mengatasi permasalahan plastik! Kami juga telah mempersiapkan beberapa pertanyaan untuk menjadi bahan refleksi sebelum kamu mulai membaca dokumen panduan ini. Tidak ada jawaban benar atau salah, pertanyaan ini diajukan sebagai bahan diskusi.',
+        list_1: 'Apa sebenarnya masalah plastik sekali pakai itu, dan mengapa hal tersebut menjadi penting?',
+        list_2: 'Benda apa yang terbuat dari plastik yang paling sering kamu gunakan sehari-hari? Dapatkah kamu mencari alternatif terhadap benda tersebut? Jika tidak, apa tindakanmu dalam mengurangi penggunaan plastik sekali pakai?',
+        list_3: 'Apakah daur ulang merupakan solusi terbaik dari masalah limbah plastik? Mari bahas lebih lanjut.',
+        list_4: 'Apakah ada cara yang lebih baik dalam mengatasi masalah tersebut? Mari bahas lebih lanjut.',
         list_5: 'Secara sistematis, apa yang dapat kita lakukan untuk menangani masalah ini? Apa yang perusahaan dapat lakukan? Apa yang pemerintah dapat lakukan?',
-        list_6: 'Secara individu, apakah yang dapat kita lakukan untuk menangani masalah ini? Hal apakah yang dapat kamu lakukan?',
+        list_6: 'Secara individu, apa yang dapat kita lakukan untuk menangani masalah ini? Hal apa yang dapat kamu lakukan? ',
         question: 'Tanyakan pertanyaan-pertanyaan ini kepada teman dan keluargamu, dan tanyakan pula solusi yang dapat mereka sarankan!',
       }
     },
@@ -118,9 +118,13 @@ export default {
       phone: 'No Telp',
       message: 'Pesan',
     },
+    support_our_cause: {
+      donate: 'Ingin menjadi bagian dari solusi dan perubahan untuk Bali dan daerah lainnya? Berikan donasimu dan ikut berkontribusi pada kampanye Pulau Plastik untuk membantu kami dalam memberikan dampak yang lebih luas.',
+      merchandise: 'Mulai dari tote bag, pembalut menstruasi pakai ulang, dan saringan air, produk alternatif bebas plastik sekali pakai kami dapat membantumu mengurangi sampah plastik sekali pakai dari sumbernya! '
+    },
     organize: {
-      description_text_1: 'Krisis plastik tidak semata-mata dapat ditanggulangi oleh aksi individu, tetapi juga membutuhkan usaha kolektif. Bersama, kita dapat menghentikan Bali menjadi Pulau Plastik!',
-      description_text_2: 'Episode pilot Pulau Plastik telah ditayangkan di berbagai kegiatan di Bali, Lombok, Jawa, Sumatera, Sulawesi, Timor, dan Papua. Untuk mengajak lebih banyak orang lagi untuk terlibat dalam aksi ini, kami mengajak kamu untuk bergabung bersama kampanye ini dengan menyelenggarakan pemutaran Pulau Plastik di komunitasmu!',
+      description_text_1: 'Dampak sampah plastik tidak semata-mata dapat ditanggulangi oleh aksi individu, namun membutuhkan usaha kolektif. Bersama, kita dapat mencegah Bali menjadi Pulau Plastik!',
+      description_text_2: 'Setelah tayang di berbagai kegiatan di Bali, Lombok, Jawa, Sumatera, Sulawesi, Timor, dan Papua, kini kami mengajak lebih banyak orang lagi untuk terlibat. Mari, bergabung dalam aksi kampanye ini dengan menyelenggarakan pemutaran Pulau Plastik di komunitasmu!',
       problem: {
         title: 'Mengenai Masalah Plastik',
         problem_text_1: 'Jika kamu tertarik untuk menjadi bagian dari solusi permasalahan plastik, luangkan waktumu sejenak untuk membaca',
@@ -164,5 +168,10 @@ export default {
         dropdown_11: 'Ibu Seribu Pura (The Mother of a Thousand Temples)'
       }
     }
+  },
+  alert: {
+    title: 'Info',
+    text: 'File tidak tersedia',
+    close: 'Tutup'
   }
 }

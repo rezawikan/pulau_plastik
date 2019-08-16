@@ -39,7 +39,7 @@ export default {
   ],
 
   axios: {
-    baseURL: 'http://localhost:8000',
+    baseURL: 'http://localhost:3000',
     proxy: true
   },
 
@@ -51,10 +51,6 @@ export default {
       },
       changeOrigin: true
     }
-  },
-  server: {
-    port: 8000, // default: 3000
-    host: '0.0.0.0', // default: localhost
   },
   /*
    ** Plugins to load before mounting the App

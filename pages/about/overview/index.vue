@@ -26,7 +26,7 @@
               <li>{{ $t('content.about.campaign.list_1') }}</li>
               <li>{{ $t('content.about.campaign.list_2') }}</li>
             </ul>
-            <p>{{ $t('content.about.campaign.overview_3') }} <a href="#">{{ $t('content.about.campaign.overview_4') }}</a> {{ $t('content.about.campaign.overview_5') }}
+            <p>{{ $t('content.about.campaign.overview_3') }} <a href="https://drive.google.com/file/d/1qwUc_rRhafNBz3KrlTmm13I6DxZlw_Ph/view" target="_blank">{{ $t('content.about.campaign.overview_4') }}</a> {{ $t('content.about.campaign.overview_5') }}
               <!-- <b>{{ $t('content.about.campaign.overview_6') }}</b> {{ $t('content.about.campaign.overview_7') }} -->
             </p>
           </div>
@@ -42,9 +42,9 @@
         </b-col>
         <b-col cols="12" style="color:white;">
           <carousel-3d  width="800" height="350" :controls-visible="visible" controls-width="100" controls-height="100">
-              <slide v-for="(slide, i) in slides" :index="i" :key="i">
+              <slide v-for="(slide, i) in psas" :index="i" :key="i">
                   <template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
-                    <a href="#" target="_blank"><img :data-index="i" :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }" src="~/assets/img/kerja-bakti.jpg"></a>
+                    <a :href="slide.link" target="_blank"><img :data-index="i" :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }" :src="slide.image"></a>
                   </template>
               </slide>
           </carousel-3d>
@@ -83,6 +83,7 @@
 
 <script>
 import queryString from 'query-string'
+import { mapActions, mapGetters } from 'vuex'
 export default {
   layout: 'general',
 
@@ -99,26 +100,20 @@ export default {
     return {
       episodes: [],
       visible: true,
-      slides: [{
-          image: 'https://via.placeholder.com/150'
-        },
-        {
-          image: 'https://via.placeholder.com/150'
-        },
-        {
-          image: 'https://via.placeholder.com/150'
-        }
-      ]
+      psas: []
     }
   },
 
   async asyncData({ $axios, query, app }) {
+
     let queries = Object.assign({}, query, {
       locale: app.i18n.locale
     })
-    let { data } = await $axios.$get(`/api/episode?${queryString.stringify({ ...queries })}`)
+    let episodes = await $axios.$get(`/api/episode?${queryString.stringify({ ...queries })}`)
+    let psas = await $axios.$get(`api/psas`)
     return {
-      episodes: data
+      episodes: episodes.data,
+      psas: psas.data
     }
   }
 }
