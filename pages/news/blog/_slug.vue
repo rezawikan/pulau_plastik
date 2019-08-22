@@ -3,8 +3,8 @@
   <b-row align-h="center">
     <b-col class="m-5">
       <img :src="data.image" class="img-height-md mb-3" alt="">
-      <p class="date">{{ data.created_at }}</p>
-      <p class="header-text">{{ filterTitle[0] }}</p>
+      <p class="date">{{ data.created_at }} - {{ data.author.name }}</p>
+      <p class="header-text bold">{{ filterTitle[0] }}</p>
       <div v-html="filterContent[0]"></div>
     </b-col>
   </b-row>

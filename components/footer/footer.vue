@@ -2,12 +2,7 @@
   <footer>
     <b-container fluid class="bg-blue p-3">
       <b-row align-h="center" align-v="center">
-        <b-col cols="12" sm="12" md="12" lg="4" xl="4">
-          <div class="logo">
-            <img class="img-lg" src="~/assets/img/pulau_plastik_logo_black.png" alt="">
-          </div>
-          <p class="text-center">Pulau Plastik merupakan kolaborasi aksi antara Kopernik dan Akarumput.</p>
-        </b-col>
+
         <b-col cols="12" sm="12" md="6" lg="4" xl="4">
           <div class="social-media-front">
             <h6 class="text-uppercase">{{ $t('content.button.text.follow_us') }}</h6>
@@ -31,9 +26,15 @@
             <p>{{ $t('content.footer.info')}}<br>pulauplastik@kopernik.info</p>
           </div>
         </b-col>
+        <b-col cols="12" sm="12" md="12" lg="4" xl="4">
+          <div class="logo">
+            <img class="img-lg" src="~/assets/img/pulau_plastik_logo_white.png" alt="">
+          </div>
+          <!-- <p class="text-center">Pulau Plastik merupakan kolaborasi aksi antara Kopernik dan Akarumput.</p> -->
+        </b-col>
         <b-col cols="12" sm="12" md="6" lg="4" xl="4">
-          <h6>Menu</h6>
-          <div class="footer-nav">
+          <h6 class="text-center" style="padding-top:20px;">Menu</h6>
+          <div class="footer-nav text-center">
             <ul>
               <li><a :href="localePath('about-overview')">{{ $t('pages.about')}}</a></li>
               <li><a :href="localePath('screenings-upcoming')">{{ $t('pages.screenings')}}</a></li>

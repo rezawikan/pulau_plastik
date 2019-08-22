@@ -10,15 +10,16 @@
               <b-nav-item active :href="localePath('resources-take-action')">{{ $t('pages.sub.take_action') }}</b-nav-item>
               <b-nav-item :href="localePath('resources-research')">{{ $t('pages.sub.research') }}</b-nav-item>
               <b-nav-item :href="localePath('resources-initiatives')">{{ $t('pages.sub.initiatives') }}</b-nav-item>
+              <b-nav-item :href="localePath('resources-vendors')">{{ $t('pages.sub.vendors') }}</b-nav-item>
             </b-nav>
           </div>
         </b-col>
       </b-row>
     </b-container>
 
-    <b-container class="p-3 mt-2">
+    <b-container class="p-3 mt-3">
       <b-row align-v="center">
-        <b-col cols="12">
+        <b-col cols="12" class="mb-5">
           <p>{{ $t('content.resources.take_action.description_text_1') }}</p>
           <ol>
             <li>{{ $t('content.resources.take_action.list_1') }}</li>
@@ -30,36 +31,39 @@
           </ol>
           <p>{{ $t('content.resources.take_action.question') }}</p>
         </b-col>
+        <b-col cols="12">
+          <p>{{ $t('content.resources.take_action.description_text_2') }}</p>
+        </b-col>
         <b-col cols="12" sm="12" md="6" lg="6">
-          <div class="container-block-line-thumb blur" @click.prevent="modal()">
-            <!-- <nuxt-link to="/about"> -->
-            <img src="~/assets/img/poster.png" alt="">
-            <p class="absolute-center-text text-center">Schools</p>
-            <!-- </nuxt-link> -->
+          <div class="container-block-line-thumb blur-four" @click.prevent="modal()">
+            <!-- <a href="https://docs.google.com/document/d/1qLWclqSDACpNMLwnMOBvBIOIrXnAp0UAcdhEf7i6eu8/edit?usp=sharing" target="_blank"> -->
+              <img src="~/assets/img/additional/sekolah.jpg" alt="">
+              <p class="absolute-center-text text-center futura-bold text-shadow">{{ $t('content.button.text.schools')}}</p>
+            <!-- </a> -->
           </div>
         </b-col>
         <b-col cols="12" sm="12" md="6" lg="6">
-          <div class="container-block-line-thumb blur" @click.prevent="modal()">
-            <!-- <nuxt-link to="/about"> -->
-            <img src="~/assets/img/poster.png" alt="">
-            <p class="absolute-center-text text-center">Bussiness (Office/ Restarurants)</p>
-            <!-- </nuxt-link> -->
+          <div class="container-block-line-thumb blur-four" @click.prevent="modal()">
+            <!-- <a href="https://docs.google.com/document/d/1k4Td_Mwx_9bR9OUxPf0v8hhgihpHV6j3QYFovrq9DM8/edit?usp=sharing" target="_blank"> -->
+              <img src="~/assets/img/additional/bisnis.jpg" alt="">
+              <p class="absolute-center-text text-center futura-bold text-shadow">{{ $t('content.button.text.bussiness')}}</p>
+            <!-- </a> -->
           </div>
         </b-col>
         <b-col cols="12" sm="12" md="6" lg="6">
-          <div class="container-block-line-thumb blur" @click.prevent="modal()">
-            <!-- <nuxt-link to="/about"> -->
-            <img src="~/assets/img/poster.png" alt="">
-            <p class="absolute-center-text text-center">Villages</p>
-            <!-- </nuxt-link> -->
+          <div class="container-block-line-thumb blur-four" @click.prevent="modal()">
+            <!-- <a href="https://docs.google.com/document/d/1U7EfJniAeTAcBmWdYNU4QjD2NT2DVu--KKtzjpIAJtQ/edit?usp=sharing" target="_blank"> -->
+              <img src="~/assets/img/additional/desa.jpg" alt="">
+              <p class="absolute-center-text text-center futura-bold text-shadow">{{ $t('content.button.text.villages')}}</p>
+            <!-- </a> -->
           </div>
         </b-col>
         <b-col cols="12" sm="12" md="6" lg="6">
-          <div class="container-block-line-thumb blur" @click.prevent="modal()">
-            <!-- <nuxt-link to="/about"> -->
-            <img src="~/assets/img/poster.png" alt="">
-            <p class="absolute-center-text text-center">Households</p>
-            <!-- </nuxt-link> -->
+          <div class="container-block-line-thumb blur-four" @click.prevent="modal()">
+            <!-- <a href="https://docs.google.com/document/d/1p_S_2pZEC9RThTuWiBTlEXQk19MhG3mYS589FHuc9qQ/edit?usp=sharing" target="_blank"> -->
+              <img src="~/assets/img/additional/rumah-tangga.jpg" alt="">
+              <p class="absolute-center-text text-center futura-bold text-shadow">{{ $t('content.button.text.households')}}</p>
+            <!-- </a> -->
           </div>
         </b-col>
 

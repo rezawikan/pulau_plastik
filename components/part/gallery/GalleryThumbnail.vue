@@ -1,5 +1,5 @@
 <template lang="html">
-  <b-container class="p-3 mt-2">
+  <b-container class="p-3 mt-3">
     <b-row align-v="center" v-if="data.length > 0">
       <b-col cols="4" v-for="(item, index) in data" :key="index" >
         <div class="container-block-line-thumb">

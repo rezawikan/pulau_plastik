@@ -10,17 +10,20 @@
               <b-nav-item :href="localePath('resources-take-action')">{{ $t('pages.sub.take_action') }}</b-nav-item>
               <b-nav-item active :href="localePath('resources-research')">{{ $t('pages.sub.research') }}</b-nav-item>
               <b-nav-item :href="localePath('resources-initiatives')">{{ $t('pages.sub.initiatives') }}</b-nav-item>
+              <b-nav-item :href="localePath('resources-vendors')">{{ $t('pages.sub.vendors') }}</b-nav-item>
             </b-nav>
           </div>
         </b-col>
       </b-row>
     </b-container>
-    <BlogThumbnail :type="`${$t('pages.sub.research')}`" route="resources-research-slug" :data="blogs" :meta="meta"/>
+
+
+    <ResearchThumbnail :data="researches" :meta="meta"/>
   </div>
 </template>
 
 <script>
-import BlogThumbnail from '@/components/part/blog/BlogThumbnail'
+import ResearchThumbnail from '@/components/part/research/ResearchThumbnail'
 import queryString from 'query-string'
 export default {
   layout: 'general',
@@ -35,14 +38,14 @@ export default {
   },
 
   components: {
-    BlogThumbnail
+    ResearchThumbnail
   },
 
   watchQuery: ['page'],
 
   data() {
     return {
-      blogs: [],
+      researches: [],
       meta: []
     }
   },
@@ -53,7 +56,7 @@ export default {
     })
     let { data, meta } = await $axios.$get(`/api/research?${queryString.stringify({ ...queries })}`)
     return {
-      blogs: data,
+      researches: data,
       meta: meta
     }
   }

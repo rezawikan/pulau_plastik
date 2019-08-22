@@ -1,7 +1,7 @@
 <template lang="html">
-  <b-container class="p-3 mt-2">
+  <b-container class="p-3 mt-5 mb-5">
     <b-row align-h="center" align-v="center" v-if="data.length > 0">
-      <b-col cols="7" sm="6" md="3" lg="2" v-for="(partner, index) in data" :key="index">
+      <b-col cols="7" sm="6" md="3" lg="3" v-for="(partner, index) in data" :key="index">
         <div class="container-block">
           <a :href="partner.link" target="_blank">
             <div class="logo-partner">

@@ -15,25 +15,26 @@
       </b-row>
     </b-container>
 
-    <b-container class="p-3 mt-2">
+    <b-container class="p-3 mt-5">
       <b-row align-v="center">
-        <b-col cols="12" sm="12" md="6" lg="6">
-          <div class="container-block-line-thumb blur">
-            <a href="https://goo.gl/Bisni1" target="_blank">
-            <img src="~/assets/img/poster.png" alt="">
-            <p class="absolute-center-text text-center">{{ $t('content.button.text.donate')}}</p>
-          </a>
-          </div>
-          <p>{{ $t('content.support_our_cause.donate') }}</p>
+        <b-col cols="12">
+          <h6 class="text-center">{{ $t('pages.sub.support_our_cause') }}</h6>
         </b-col>
         <b-col cols="12" sm="12" md="6" lg="6">
-          <div class="container-block-line-thumb blur">
+          <div class="container-block-line-thumb blur-footer text-shadow">
+            <a href="https://goo.gl/Bisni1">
+              <img src="~/assets/img/additional/donation.jpg" alt="">
+              <p class="absolute-center-text text-center spacer bold">{{ $t('content.button.text.donate')}}</p>
+            </a>
+          </div>
+        </b-col>
+        <b-col cols="12" sm="12" md="6" lg="6">
+          <div class="container-block-line-thumb blur-footer text-shadow">
             <nuxt-link :to="localePath('merchandise')">
-            <img src="~/assets/img/poster.png" alt="">
-            <p class="absolute-center-text text-center">{{ $t('content.button.text.buy')}}</p>
+              <img src="~/assets/img/additional/merchandise.jpg" alt="">
+              <p class="absolute-center-text text-center spacer bold">{{ $t('content.button.text.buy')}}</p>
             </nuxt-link>
           </div>
-          <p>{{ $t('content.support_our_cause.merchandise') }}</p>
         </b-col>
       </b-row>
     </b-container>

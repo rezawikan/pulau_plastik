@@ -1,14 +1,15 @@
 <template lang="html">
-  <b-container class="p-3 mt-2">
+  <b-container class="p-3 mt-3">
     <b-row align-v="center" v-if="data.length > 0">
-      <b-col cols="4" v-for="(blog, index) in data" :key="index">
-        <div class="container-block-line-thumb">
-          <a :href="blog.link" target="_blank">
-          <img :src="blog.image" class="" alt="Host A Screening">
-          <div class="thumb-container">
+      <b-col cols="4" md="4" lg="4" l v-for="(blog, index) in data" :key="index">
+        <div class="container-block-line-media mb-3">
+          <a :href="blog.link" target="_blank" :title="blog.title">
+            <div class="picture">
+              <img :src="blog.image" class="" :alt="blog.title">
+            </div>
+          <div class="media-container">
             <p class="date">{{ $t('pages.sub.media_coverage') }} - {{ blog.created_at }}</p>
-            <p class="title">{{ blog.title }}</p>
-            <p class="footer">{{ blog.summary }}</p>
+            <p class="title">{{ blog.title.substring(0,100)+".." }}</p>
           </div>
         </a>
         </div>

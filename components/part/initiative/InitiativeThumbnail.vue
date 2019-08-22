@@ -1,14 +1,15 @@
 <template lang="html">
-  <b-container class="p-3 mt-2">
+  <b-container class="p-3 mt-3">
     <b-row align-v="center" v-if="data.length > 0">
       <b-col cols="4" v-for="(blog, index) in data" :key="index" >
-        <div class="container-block-line-thumb">
+        <div class="container-block-line-media mb-3">
           <a :href="blog.link" target="_blank">
-            <img :src="blog.image" class="" alt="Host A Screening">
-            <div class="thumb-container">
-              <p class="date">{{ type }} - {{ blog.created_at }}</p>
+            <div class="picture">
+              <img :src="blog.image" :alt="blog.title">
+            </div>
+            <div class="media-container">
               <p class="title">{{ blog.title }}</p>
-              <p class="footer">{{ blog.summary }}</p>
+              <p class="text">{{ blog.summary }}</p>
             </div>
             </a>
         </div>
@@ -32,14 +33,6 @@ export default {
     Pagination
   },
   props: {
-    type: {
-      required: true,
-      type: String
-    },
-    route: {
-      required: true,
-      type: String
-    },
     data : {
       required: true,
       value: Array/Object

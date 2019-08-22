@@ -16,7 +16,7 @@
       </b-row>
     </b-container>
 
-    <b-container class="p-3 mt-2">
+    <b-container class="p-3 mt-3">
       <b-row align-h="center">
         <b-col cols="12">
           <div class="container-outside">
@@ -26,8 +26,7 @@
               <li>{{ $t('content.about.campaign.list_1') }}</li>
               <li>{{ $t('content.about.campaign.list_2') }}</li>
             </ul>
-            <p>{{ $t('content.about.campaign.overview_3') }} <a href="https://drive.google.com/file/d/1qwUc_rRhafNBz3KrlTmm13I6DxZlw_Ph/view" target="_blank">{{ $t('content.about.campaign.overview_4') }}</a> {{ $t('content.about.campaign.overview_5') }}
-              <!-- <b>{{ $t('content.about.campaign.overview_6') }}</b> {{ $t('content.about.campaign.overview_7') }} -->
+            <p>{{ $t('content.about.campaign.overview_3') }}</p>
             </p>
           </div>
         </b-col>
@@ -39,9 +38,10 @@
         <b-col cols="12">
           <p class="header-text">{{ $t('pages.sub.psas') }}</p>
           <p>{{ $t('content.about.psas.pre_text') }}</p>
+
         </b-col>
         <b-col cols="12" style="color:white;">
-          <carousel-3d  width="800" height="350" :controls-visible="visible" controls-width="100" controls-height="100">
+          <carousel-3d v-if="psas.length > 0"  width="800" height="350" :controls-visible="visible" controls-width="100" controls-height="100">
               <slide v-for="(slide, i) in psas" :index="i" :key="i">
                   <template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
                     <a :href="slide.link" target="_blank"><img :data-index="i" :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }" :src="slide.image"></a>
@@ -57,6 +57,7 @@
         <b-col cols="12">
           <p class="header-text">{{ $t('pages.sub.series') }}</p>
           <p>{{ $t('content.about.series.pre_text') }}</p>
+          <p>{{ $t('content.about.series.text_1') }} <nuxt-link :to="localePath('screenings-organize')">{{ $t('content.about.series.text_2') }}</nuxt-link> {{ $t('content.about.series.text_3') }}</p>
         </b-col>
         <b-col cols="12" lg="6" class="mt-3" v-for="(episode, index) in episodes" :key="index">
           <div class="container-block-line">
@@ -73,8 +74,7 @@
         <b-col cols="12">
           <p class="header-text">{{$t('pages.sub.film')}}</p>
           <p>{{ $t('content.about.film.pre_text') }}</p>
-          <p class="text-center"><img src="~/assets/img/additional/the_film.jpg" style="width:50%;" alt=""></p>
-
+          <p class="text-center"><img src="~/assets/img/additional/the_film.jpg"></p>
         </b-col>
       </b-row>
     </b-container>

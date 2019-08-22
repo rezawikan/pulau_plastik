@@ -3,19 +3,17 @@
     <b-container fluid class="partscreen-img gap-fixed about">
       <b-row align-h="center" no-gutters>
         <b-col>
-          <img src="~/assets/img/header/news.jpg" class="" alt="">
+          <img src="~/assets/img/header/merchandise.jpg" class="" alt="">
           <h3 class="absolute-center-btn text-center white-color">{{ $t('pages.sub.merchandise') }}</h3>
         </b-col>
       </b-row>
     </b-container>
 
-    <b-container class="p-3 mt-2">
+    <b-container class="p-3 mt-3">
       <b-row align-v="center">
         <b-col cols="12">
-          <p class="header-text">{{ $t('content.merchandise.title_1')}}</p>
+          <p class="header-text">{{ $t('content.merchandise.title')}}</p>
           <p>{{ $t('content.merchandise.description_text_1')}}</p>
-          <p>{{ $t('content.merchandise.description_text_2')}}</p>
-          <p>{{ $t('content.merchandise.description_text_3')}}</p>
         </b-col>
       </b-row>
     </b-container>

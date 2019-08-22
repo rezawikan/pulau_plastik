@@ -15,7 +15,7 @@
       </b-row>
     </b-container>
 
-    <b-container class="p-3 mt-2">
+    <b-container class="p-3 mt-3">
       <b-row align-v="center">
         <b-col cols="12">
           <b-form @submit.prevent="submit">
@@ -39,7 +39,7 @@
                 v-model="form.message"
               ></b-form-textarea>
             </b-form-group>
-            <b-button class="btn-custom" type="submit"><b-spinner small v-if="loading"></b-spinner> Submit</b-button>
+            <b-button class="btn-custom" type="submit"><b-spinner small v-if="loading"></b-spinner>{{ $t('form.send') }}</b-button>
           </b-form>
         </b-col>
       </b-row>

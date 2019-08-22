@@ -24,5 +24,9 @@ export const actions = {
   async contact({ commit }, query) {
     let response = await this.$axios.$get(`api/request-contact?${queryString.stringify(query)}`)
     return response
+  },
+  async buying({ commit }, query) {
+    let response = await this.$axios.$get(`api/request-buying?${queryString.stringify(query)}`)
+    return response
   }
 }

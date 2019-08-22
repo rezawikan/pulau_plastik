@@ -45,7 +45,7 @@ export default {
 
   proxy: {
     '/api': {
-      target: 'http://admin-pulau-plastik.test:8080/api/',
+      target: 'https://api.pulauplastik.org/api/',
       pathRewrite: {
         '^/api/': ''
       },
@@ -66,6 +66,10 @@ export default {
       src: '@/plugins/vue-js-modal',
       // ssr: false
     },
+    // {
+    //   src: '@/plugins/vue-isotope',
+    //   // ssr: false
+    // },
     {
       src: '@/plugins/vue-concise',
       ssr: false
@@ -112,10 +116,10 @@ export default {
       lazy: true,
       defaultLocale: 'id',
       langDir: 'lang/',
-      detectBrowserLanguage: {
-        useCookie: true,
-        cookieKey: 'pulau_plastik_cookie'
-      },
+      // detectBrowserLanguage: {
+      //   useCookie: true,
+      //   cookieKey: 'pulau_plastik_cookie'
+      // },
       // By default a store module is registered and kept in sync with the
       // app's i18n current state
       // Set to false to disable
@@ -194,6 +198,10 @@ export default {
           en: '/screenings/past-screenings',
           id: '/pemutaran/jadwal-sebelumnya',
         },
+        'resources/vendors/index': {
+          en: '/resources/vendors',
+          id: '/sumber/vendor',
+        },
         'screenings/upcoming/index': {
           en: '/screenings/upcoming',
           id: '/pemutaran/jadwal',
@@ -209,7 +217,15 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
+    extend(config, ctx) {
+      // config.module.rules.push({
+      //   test: /\.(pdf)$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: '[path][name].[ext]',
+      //   },
+      // })
+    },
     transpile: [/^vue2-google-maps($|\/)/]
   }
 }

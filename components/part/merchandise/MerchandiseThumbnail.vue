@@ -1,14 +1,14 @@
 <template lang="html">
-  <b-container class="p-3 mt-2">
+  <b-container class="p-3 mt-3">
     <b-row align-v="center" v-if="data.length > 0">
-      <b-col cols="6" col-sm="12" v-for="(item, index) in data" :key="index">
+      <b-col cols="6" sm="12" lg="4" v-for="(item, index) in data" :key="index">
         <div class="container-block-line-thumb">
           <img :src="item.image" class="" alt="">
           <div class="thumb-container">
-            <p class="title">{{ item.title }}</p>
-            <p>{{ item.summary }}</p>
-            <div class="" v-html="item.content">
-            </div>
+            <p class="title">{{ item.name }}</p>
+            <!-- <p class="text">{{ item.summary }}</p> -->
+            <p class="text">{{ item.price | toRupiah }}</p>
+            <SubmitRequest :index="index" :title="item.name"/>
           </div>
         </div>
       </b-col>
@@ -26,9 +26,11 @@
 
 <script>
 import Pagination from '@/components/part/pagination/Pagination'
+import SubmitRequest from '@/components/part/merchandise/modal/SubmitRequest'
 export default {
   components: {
-    Pagination
+    Pagination,
+    SubmitRequest
   },
   props: {
     data : {
@@ -38,6 +40,15 @@ export default {
     meta: {
       required: true,
       value: Array/Object
+    }
+  },
+  filters: {
+    toRupiah: function (angka) {
+      var rupiah = '';
+      var angkarev = angka.toString().split('').reverse().join('');
+      for (var i = 0; i < angkarev.length; i++)
+        if (i % 3 == 0) rupiah += angkarev.substr(i, 3) + '.';
+      return 'Rp. ' + rupiah.split('', rupiah.length - 1).reverse().join('')+ ',-';
     }
   }
 }

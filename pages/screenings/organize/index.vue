@@ -16,7 +16,7 @@
       </b-row>
     </b-container>
 
-    <b-container class="p-3 mt-2">
+    <b-container class="p-3 mt-3">
       <b-row align-h="center">
         <b-col cols="12">
           <p>{{ $t('content.organize.description_text_1') }}</p>
@@ -31,7 +31,7 @@
           <p class="header-text">{{ $t('content.organize.problem.title') }}</p>
         </b-col>
         <b-col cols="12">
-          <p>{{ $t('content.organize.problem.problem_text_1') }} <a href="#" target="_blank">{{ $t('content.organize.problem.problem_text_2') }}</a> {{ $t('content.organize.problem.problem_text_3') }}</p>
+          <p>{{ $t('content.organize.problem.problem_text_1') }} <a href="/files/screening.pdf" target="_blank">{{ $t('content.organize.problem.problem_text_2') }}</a> {{ $t('content.organize.problem.problem_text_3') }}</p>
           <p>{{ $t('content.organize.problem.problem_text_4') }}</p>
         </b-col>
       </b-row>
@@ -48,7 +48,6 @@
               <b-container>
                 <b-row>
                   <b-col cols="12">
-                    <p>{{ $t('content.organize.application_form.sub_title_1') }}</p>
                     <b-alert :show="message">{{ $t('content.organize.application_form.message') }}</b-alert>
                   </b-col>
                   <b-col cols="12" sm="6">
@@ -72,7 +71,6 @@
                     </b-form-group>
                   </b-col>
                   <b-col cols="12" sm="6">
-                    <p>{{ $t('content.organize.application_form.sub_title_2') }}</p>
                   </b-col>
                   <b-col cols="12">
                     <b-form-group :label="$t('content.organize.application_form.text_label_5')">
@@ -96,7 +94,6 @@
                         value: $t('content.organize.application_form.dropdown_6')
                         }]" v-model="form.about" required></b-form-select>
                     </b-form-group>
-                    <p>{{ $t('content.organize.application_form.sub_title_3') }}</p>
                   </b-col>
                   <b-col cols="12" sm="6">
                     <b-form-group :label="$t('content.organize.application_form.text_label_6')" >
@@ -160,21 +157,35 @@
                   <b-col cols="12" sm="6">
                     <b-form-group :label="$t('content.organize.application_form.text_label_13')">
                       <b-form-select :options="[{
-                        text: $t('content.organize.application_form.dropdown_7'),
-                        value: $t('content.organize.application_form.dropdown_7')
+                          text: $t('content.organize.application_form.dropdown_7'),
+                          value: $t('content.organize.application_form.dropdown_7')
+                        },
+                        {
+                          text: $t('content.organize.application_form.dropdown_8'),
+                          value: $t('content.organize.application_form.dropdown_8')
+                        },
+                        {
+                            text: $t('content.organize.application_form.dropdown_9'),
+                            value: $t('content.organize.application_form.dropdown_9')
+                        },
+                        {
+                          text: $t('content.organize.application_form.dropdown_10'),
+                          value: $t('content.organize.application_form.dropdown_10')
                         }]" v-model="form.episode" required></b-form-select>
                     </b-form-group>
                   </b-col>
                   <b-col cols="12">
-                    <p>{{ $t('content.organize.application_form.sub_title_4') }}</p>
+                    <b-form-group :label="$t('content.organize.application_form.text_label_14')" >
+                      <b-form-textarea v-model="form.shortDescription_1" required ></b-form-textarea>
+                    </b-form-group>
                   </b-col>
                   <b-col cols="12">
-                    <b-form-group :label="$t('content.organize.application_form.text_label_14')" >
-                      <b-form-textarea v-model="form.shortDescription" required ></b-form-textarea>
+                    <b-form-group :label="$t('content.organize.application_form.text_label_15')" >
+                      <b-form-textarea v-model="form.shortDescription_2" required ></b-form-textarea>
                     </b-form-group>
                   </b-col>
                   <b-col cols="12" sm="6">
-                    <b-button @click.prevent="HostAScreening" class="btn-custom bg-navy" href="#" variant="primary"><b-spinner small v-if="loading"></b-spinner> Submit</b-button>
+                    <b-button @click.prevent="HostAScreening" class="btn-custom bg-navy" href="#" variant="primary"><b-spinner small v-if="loading"></b-spinner> {{ $t('form.send') }}</b-button>
                   </b-col>
                 </b-row>
               </b-container>
@@ -220,7 +231,8 @@ export default {
         ageOfAudience: '',
         eventDecription: '',
         episode: '',
-        shortDescription: ''
+        shortDescription_1: '',
+        shortDescription_2: ''
       }
     }
   },
@@ -244,8 +256,6 @@ export default {
         this.message = true
         this.loading = false
       })
-
-
     },
     scrollAfter() {
       this.$scrollTo('#fill-form', 500, {
