@@ -81,13 +81,6 @@ export default {
     this.getNavbarHeight()
     this.getHeaderHeight()
     window.addEventListener('scroll', this.handleScroll)
-    this.$refs.header.style.height = window.outerHeight+'px'
-    window.addEventListener('resize', () => {
-      // We execute the same script as before
-        this.$refs.header.style.height = window.outerHeight+'px'
-    });
-
-
   },
 
   methods: {
