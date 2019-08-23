@@ -39,7 +39,7 @@
               <li><a :href="localePath('about-overview')">{{ $t('pages.about')}}</a></li>
               <li><a :href="localePath('screenings-upcoming')">{{ $t('pages.screenings')}}</a></li>
               <li><a :href="localePath('news-blog')">{{ $t('pages.news')}}</a></li>
-              <li><a :href="localePath('resources-take-action')">{{ $t('pages.resources')}}</a></li>
+              <li><a :href="localePath('resources-research')">{{ $t('pages.resources')}}</a></li>
               <li><a :href="localePath('contact-enquiry')">{{ $t('pages.contact')}}</a></li>
             </ul>
           </div>

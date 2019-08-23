@@ -45,6 +45,24 @@ p {
   font-family: 'Abel', sans-serif;
 }
 
+a {
+  color: $option-blue-one;
+}
+
+a:active,
+a:focus,
+a:visited {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+button:active,
+button:focus,
+button:visited {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
 b {
   font-weight: bold;
   color: #007bff;
@@ -57,6 +75,15 @@ ul {
 
 img {
   width: 100%;
+}
+
+.page-link {
+  color: $option-blue-one !important;
+}
+
+.page-link.active {
+  background-color: $option-blue-one !important;
+  color: white !important;
 }
 // Home
 
@@ -96,11 +123,11 @@ img {
 }
 
 .futura-bold {
-    font-family: 'FuturaStdBold';
+  font-family: 'FuturaStdBold';
 }
 
 .proxima-nova {
-    font-family: 'ProximaNovaReg' !important;
+  font-family: 'ProximaNovaReg' !important;
 }
 
 .spacer {
@@ -358,7 +385,6 @@ img {
     opacity: 0.8;
     // z-index: -1;
     transition: 5ms;
-
     // &:hover {
     //   opacity: 0;
     // }
@@ -385,6 +411,7 @@ img {
   margin: 0 !important;
 }
 /* Additional */
+
 .header-text {
   font-size: 18px;
   display: inline-block;
@@ -629,7 +656,7 @@ p.pre-text {
 p.title-text {
   font-family: 'BebasNeueReg';
   text-transform: uppercase;
-  color: #69b5b8;
+  color: $option-blue-one;
   font-weight: bold;
   // font-size: 20px;
   letter-spacing: 0.2em;
@@ -773,7 +800,6 @@ nav .navbar-brand {
   background-color: transparent !important;
 }
 /* JUMBOTRON */
-
 .front-background {
   background: url("~assets/img/header_1.jpg") center no-repeat;
   /* background-repeat: no-repeat;
@@ -891,17 +917,14 @@ nav .navbar-brand {
   width: 250px;
 }
 /* PADDING AND MARGIN */
-
 .m-auto {
   margin: auto;
 }
 /* FONTS */
-
 .bold {
   font-weight: bold;
 }
 /* BUTTONS */
-
 .btn-custom {
   padding: 10px 20px;
   background-color: $option-blue-one !important;
@@ -911,7 +934,8 @@ nav .navbar-brand {
   border-radius: 0 !important;
   font-family: 'FuturaStdBold';
   font-size: 0.8em;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
+  border-color: transparent !important;
 
   &:hover {
     color: #fff;
@@ -967,7 +991,6 @@ nav .navbar-brand {
   animation: bounce 1.5s infinite;
 }
 /* FOOTER */
-
 footer h1,
 footer h2,
 footer h3,
@@ -1116,8 +1139,8 @@ footer {
 }
 @media (max-width: 472px) {
   .jumbotron .front-logo {
-        top: 42%;
-    }
+    top: 42%;
+  }
 }
 @media (max-width: 428px) {
   .jumbotron .front-text {
