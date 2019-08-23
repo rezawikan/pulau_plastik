@@ -29,7 +29,7 @@
       <b-col cols="12" class="pb-3">
         <h6 class="text-center">{{ $t('content.general.supported_by')}}</h6>
       </b-col>
-      <b-col cols="7" sm="3" md="3" lg="3" v-for="(supporter,index) in supporters" :key="index">
+      <b-col cols="7" sm="3" md="3" lg="2" v-for="(supporter,index) in supporters" :key="index">
         <div class="partner">
           <a :href="supporter.link" target="_blank">
             <img :src="supporter.image">
@@ -80,7 +80,7 @@
         <div class="container-block-line-thumb blur-footer">
           <a href="https://goo.gl/Bisni1">
             <img src="~/assets/img/additional/donation.jpg" alt="">
-            <p class="absolute-center-text text-center spacer bold text-shadow">{{ $t('content.button.text.donate')}}</p>
+            <p class="absolute-center-text text-center spacer bold text-shadow futura-bold">{{ $t('content.button.text.donate')}}</p>
           </a>
         </div>
       </b-col>
@@ -88,7 +88,7 @@
         <div class="container-block-line-thumb blur-footer">
           <nuxt-link :to="localePath('merchandise')">
             <img src="~/assets/img/additional/merchandise.jpg" alt="">
-            <p class="absolute-center-text text-center spacer bold text-shadow">{{ $t('content.button.text.buy')}}</p>
+            <p class="absolute-center-text text-center spacer bold text-shadow futura-bold">{{ $t('content.button.text.buy')}}</p>
           </nuxt-link>
         </div>
       </b-col>

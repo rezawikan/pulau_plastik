@@ -7,7 +7,7 @@
           <h3 class="absolute-center-btn text-center white-color">{{ $t('pages.resources') }}</h3>
           <div class="absolute-bottom navigation-btn">
             <b-nav tabs align="center">
-              <b-nav-item :href="localePath('resources-take-action')">{{ $t('pages.sub.take_action') }}</b-nav-item>
+              <!-- <b-nav-item :href="localePath('resources-take-action')">{{ $t('pages.sub.take_action') }}</b-nav-item> -->
               <b-nav-item :href="localePath('resources-research')">{{ $t('pages.sub.research') }}</b-nav-item>
               <b-nav-item :href="localePath('resources-initiatives')">{{ $t('pages.sub.initiatives') }}</b-nav-item>
               <b-nav-item active :href="localePath('resources-vendors')">{{ $t('pages.sub.vendors') }}</b-nav-item>

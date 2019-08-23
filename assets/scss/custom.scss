@@ -13,6 +13,11 @@
   src: url("~assets/fonts/BebasNeue-Regular.ttf");
   src: url("~assets/fonts/BebasNeue-Regular.ttf") format('truetype');
 }
+@font-face {
+  font-family: 'ProximaNovaReg';
+  src: url("~assets/fonts/ProximaNovaRegular.ttf");
+  src: url("~assets/fonts/ProximaNovaRegular.ttf") format('truetype');
+}
 $primary-black: #202020;
 $primary-grey: #959595;
 $primary-blue: #4c8981;
@@ -92,6 +97,10 @@ img {
 
 .futura-bold {
     font-family: 'FuturaStdBold';
+}
+
+.proxima-nova {
+    font-family: 'ProximaNovaReg' !important;
 }
 
 .spacer {
@@ -705,7 +714,7 @@ nav .navbar-brand {
 }
 
 .navbar-light .nav-item .nav-link {
-  color: #FFFFFF !important;
+  color: black !important;
   transition: 1s;
 }
 
@@ -766,7 +775,7 @@ nav .navbar-brand {
 /* JUMBOTRON */
 
 .front-background {
-  background: url("~assets/img/header.png") center no-repeat;
+  background: url("~assets/img/header_1.jpg") center no-repeat;
   /* background-repeat: no-repeat;
     background-position: center; */
   -webkit-background-size: cover;
@@ -1102,9 +1111,9 @@ footer {
   }
 }
 @media (max-width: 472px) {
-  /* .jumbotron .front-logo {
-        bottom: 50%;
-    } */
+  .jumbotron .front-logo {
+        top: 42%;
+    }
 }
 @media (max-width: 428px) {
   .jumbotron .front-text {
