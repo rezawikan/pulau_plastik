@@ -1086,6 +1086,10 @@ footer {
 }
 /* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 576px) {
+  .front-background {
+    background-attachment: scroll;
+  }
+
   .jumbotron .front-logo img {
     width: 10em;
   }
