@@ -85,6 +85,9 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
     'vue-scrollto/nuxt',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-20429270-13',
+    }],
     ['nuxt-fontawesome', {
       component: 'fa',
       imports: [{
