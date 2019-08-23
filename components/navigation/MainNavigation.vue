@@ -3,9 +3,9 @@
     <div class="container-fluid">
       <b-navbar class="transition-fs" toggleable="lg" :type="theme" fixed="top" ref="navbar">
         <b-navbar variant="faded" type="light">
-          <!-- <b-navbar-brand :href="localePath('index')">
+          <b-navbar-brand :href="localePath('index')">
             <img src="~/assets/img/pulau_plastik_logo_black.png" alt="Pulau Plastik">
-          </b-navbar-brand> -->
+          </b-navbar-brand>
         </b-navbar>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
