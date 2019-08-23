@@ -24,7 +24,7 @@
           <div class="container-block-line-thumb blur-footer text-shadow">
             <a href="https://goo.gl/Bisni1">
               <img src="~/assets/img/additional/donation.jpg" alt="">
-              <p class="absolute-center-text text-center spacer bold">{{ $t('content.button.text.donate')}}</p>
+              <p class="absolute-center-text text-center spacer bold text-shadow futura-bold">{{ $t('content.button.text.donate')}}</p>
             </a>
           </div>
         </b-col>
@@ -32,7 +32,7 @@
           <div class="container-block-line-thumb blur-footer text-shadow">
             <nuxt-link :to="localePath('merchandise')">
               <img src="~/assets/img/additional/merchandise.jpg" alt="">
-              <p class="absolute-center-text text-center spacer bold">{{ $t('content.button.text.buy')}}</p>
+              <p class="absolute-center-text text-center spacer bold text-shadow futura-bold">{{ $t('content.button.text.buy')}}</p>
             </nuxt-link>
           </div>
         </b-col>
