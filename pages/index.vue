@@ -9,10 +9,10 @@
       </b-col>
     </b-row>
   </b-container>
-<!--
+
   <section class="trailer">
     <iframe src="https://www.youtube.com/embed/4xUAUWcPq74?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </section> -->
+  </section>
 
   <!-- Description One -->
   <b-container fluid class="bg-navy description p-3">
@@ -151,14 +151,14 @@ export default {
     this.getTestimonies(queries)
     this.getSupporters(queries)
   },
-  // 
-  // async asyncData({ app }) {
-  //   let instagram = await app.$axios.$get(`${process.env.INSTAGRAM_API}v1/users/self/media/recent/?access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}&count=6`)
-  //
-  //   return {
-  //     instagram: instagram.data
-  //   }
-  // }
+
+  async asyncData({ app }) {
+    let instagram = await app.$axios.$get(`${process.env.INSTAGRAM_API}v1/users/self/media/recent/?access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}&count=6`)
+
+    return {
+      instagram: instagram.data
+    }
+  }
 }
 </script>
 
