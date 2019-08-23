@@ -41,6 +41,7 @@
 
         </b-col>
         <b-col cols="12" style="color:white;">
+          <no-ssr>
           <carousel-3d v-if="psas.length > 0"  width="800" height="350" :controls-visible="visible" controls-width="100" controls-height="100">
               <slide v-for="(slide, i) in psas" :index="i" :key="i">
                   <template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
@@ -48,6 +49,7 @@
                   </template>
               </slide>
           </carousel-3d>
+          </no-ssr>
         </b-col>
       </b-row>
     </b-container>
