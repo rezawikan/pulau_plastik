@@ -1,7 +1,7 @@
 <template lang="html">
   <b-container class="p-3 mt-3">
     <b-row align-v="center" v-if="data.length > 0">
-      <b-col cols="4" v-for="(blog, index) in data" :key="index" >
+      <b-col cols="12" sm="6" md="4" lg="4" v-for="(blog, index) in data" :key="index" >
         <div class="container-block-line-media mb-3">
           <a :href="blog.link" target="_blank">
             <div class="picture">
