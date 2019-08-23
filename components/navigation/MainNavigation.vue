@@ -4,7 +4,8 @@
       <b-navbar class="transition-fs" toggleable="lg" :type="theme" fixed="top" ref="navbar">
         <b-navbar variant="faded" type="light">
           <b-navbar-brand :href="localePath('index')">
-            <img src="~/assets/img/pulau_plastik_logo_black.png" alt="Pulau Plastik">
+            <img v-if="logo" src="~/assets/img/pulau_plastik_logo_black.png" alt="Pulau Plastik">
+            <img v-else="logo" src="~/assets/img/transparent.png">
           </b-navbar-brand>
         </b-navbar>
 
@@ -53,6 +54,7 @@ export default {
       headerHeight: 0,
       scroll: 0,
       theme: 'light',
+      logo: false
     }
   },
 
@@ -78,15 +80,24 @@ export default {
   mounted() {
     this.getNavbarHeight()
     this.getHeaderHeight()
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll)
+    this.$refs.header.style.height = window.outerHeight+'px'
+    window.addEventListener('resize', () => {
+      // We execute the same script as before
+        this.$refs.header.style.height = window.outerHeight+'px'
+    });
+
+
   },
 
   methods: {
     handleScroll(event) {
       if ((window.scrollY + 1) >= (this.headerHeight - this.navbarHeight)) {
           this.theme = 'dark'
+          this.logo = true
       } else {
           this.theme = 'light'
+          this.logo = false
       }
     },
     getNavbarHeight() {
