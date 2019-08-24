@@ -20,7 +20,22 @@ export default {
     return {
       title: this.filterTitle[0],
       meta: [
-        // { hid: 'description', name: 'description', content: `${ this.$t('content.home.description_text_1')}` }
+        { hid: 'description', name: 'description', content: this.filterFirstParagraft },
+        {
+          property: 'og:title',
+          content:  this.filterTitle[0],
+          vmid: 'og:title'
+        },
+        {
+          property: 'og:description',
+          content:  this.filterFirstParagraft,
+          vmid: 'og:description'
+        },
+        {
+          property: 'og:image',
+          content:  this.data.image,
+          vmid: 'og:image'
+        }
       ]
     }
   },
@@ -39,6 +54,9 @@ export default {
       }).map(x => {
         return x.content
       })
+    },
+    filterFirstParagraft() {
+      return this.filterContent[0].split('.')[0].replace(/<[^>]*>?/gm, '')
     }
   },
 
@@ -51,7 +69,6 @@ export default {
 
   async asyncData({ app, $axios, store, params }) {
     let { data, data: { translate }} = await $axios.$get(`/api/blog/${params.slug}`)
-    console.log(translate);
     await store.dispatch('i18n/setRouteParams', translate)
 
     return {

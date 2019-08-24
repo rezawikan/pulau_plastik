@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || 'Pulau Plastik',
+    title: 'Pulau Plastik',
     meta: [{
         charset: 'utf-8'
       },
@@ -15,7 +15,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'Pulau Plastik merupakan kampanye kolaboratif dalam menangani isu plastik sekali pakai di Bali dan sekitarnya.'
       }
     ],
     link: [{

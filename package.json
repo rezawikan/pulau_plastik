@@ -1,7 +1,7 @@
 {
   "name": "pulau_plastik",
-  "version": "1.0.0",
-  "description": "My groovy Nuxt.js project",
+  "version": "2.0.0",
+  "description": "Pulau Plastik merupakan kampanye kolaboratif dalam menangani isu plastik sekali pakai di Bali dan sekitarnya.",
   "author": "Mochammad Rezza Wikandito",
   "private": true,
   "scripts": {

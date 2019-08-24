@@ -49,7 +49,22 @@ export default {
     return {
       title: `Pulau Plastik - ${ this.$t('pages.sub.support_our_cause')}`,
       meta: [
-        // { hid: 'description', name: 'description', content: `${ this.$t('content.home.description_text_1')}` }
+        // { hid: 'description', name: 'description', content: `${ this.$t('content.home.description_text_1')}` },
+        {
+          property: 'og:title',
+          content:  `Pulau Plastik - ${ this.$t('pages.sub.support_our_cause')}`,
+          vmid: 'og:title'
+        },
+        // {
+        //   property: 'og:description',
+        //   content:  `${ this.$t('pages.sub.partners')}`,
+        //   vmid: 'og:description'
+        // },
+        {
+          property: 'og:image',
+          content:  require('~/assets/img/header/contact.jpg'),
+          vmid: 'og:image'
+        }
       ]
     }
   },

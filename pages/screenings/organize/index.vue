@@ -207,7 +207,22 @@ export default {
     return {
       title: `Pulau Plastik - ${ this.$t('pages.sub.organize')}`,
       meta: [
-        // { hid: 'description', name: 'description', content: `${ this.$t('content.home.description_text_1')}` }
+        { hid: 'description', name: 'description', content: `${ this.$t('content.organize.description_text_2')}` },
+        {
+          property: 'og:title',
+          content:  `Pulau Plastik - ${ this.$t('pages.sub.organize')}`,
+          vmid: 'og:title'
+        },
+        {
+          property: 'og:description',
+          content:  `${ this.$t('content.organize.description_text_2')}`,
+          vmid: 'og:description'
+        },
+        {
+          property: 'og:image',
+          content:  require('~/assets/img/header/screenings.jpg'),
+          vmid: 'og:image'
+        }
       ]
     }
   },

@@ -42,6 +42,21 @@ export default {
       title: `Pulau Plastik - ${ this.$t('pages.sub.team')}`,
       meta: [
         // { hid: 'description', name: 'description', content: `${ this.$t('content.home.description_text_1')}` }
+        {
+          property: 'og:title',
+          content:  `Pulau Plastik - ${ this.$t('pages.sub.team')}`,
+          vmid: 'og:title'
+        },
+        // {
+        //   property: 'og:description',
+        //   content:  `${ this.$t('pages.sub.partners')}`,
+        //   vmid: 'og:description'
+        // },
+        {
+          property: 'og:image',
+          content:  require('~/assets/img/header/about.jpg'),
+          vmid: 'og:image'
+        }
       ]
     }
   }
