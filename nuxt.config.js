@@ -119,6 +119,7 @@ export default {
       lazy: true,
       defaultLocale: 'id',
       langDir: 'lang/',
+      defaultLocaleRouteNameSuffix: 'default',
       // detectBrowserLanguage: {
       //   useCookie: true,
       //   cookieKey: 'pulau_plastik_cookie'
@@ -139,19 +140,19 @@ export default {
         // Mutation to commit to set route parameters translations
         syncRouteParams: true
       },
-      parsePages: true,
+      parsePages: false,
       pages: {
         'merchandise/index': {
           en: '/merchandise',
           id: '/merchandise',
         },
-        'about/team/index': {
-          en: '/about/team',
-          id: '/tentang/tim',
-        },
+        // 'about/team/index': {
+        //   en: '/about/team',
+        //   id: '/tentang/tim',
+        // },
         'about/overview/index': {
           en: '/about/overview',
-          id: '/tentang/sekilas',
+          id: '/tentang/kampanye',
         },
         'about/partners/index': {
           en: '/about/partners',
@@ -189,18 +190,18 @@ export default {
           en: '/resources/research',
           id: '/sumber/penelitian',
         },
-        'resources/take-action/index': {
-          en: '/resources/take-action',
-          id: '/sumber/beraksi',
-        },
+        // 'resources/take-action/index': {
+        //   en: '/resources/take-action',
+        //   id: '/sumber/beraksi',
+        // },
         'screenings/organize/index': {
           en: '/screenings/organize',
-          id: '/pemutaran/jadwal',
+          id: '/pemutaran/selenggarakan-pemutaran',
         },
-        'screenings/past-screenings/index': {
-          en: '/screenings/past-screenings',
-          id: '/pemutaran/jadwal-sebelumnya',
-        },
+        // 'screenings/past-screenings/index': {
+        //   en: '/screenings/past-screenings',
+        //   id: '/pemutaran/jadwal-sebelumnya',
+        // },
         'resources/vendors/index': {
           en: '/resources/vendors',
           id: '/sumber/vendor',
@@ -210,8 +211,28 @@ export default {
           id: '/pemutaran/jadwal',
         },
       }
-    }]
+    }],
+    '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    hostname: 'http://pulauplastik.org',
+    exclude: [
+      '/screenings/past-screenings',
+      '/en/screenings/past-screenings',
+      '/resources/take_action',
+      '/en/resources/take_action',
+      '/about/team',
+      '/en/about/team',
+      '/id/**'
+    ],
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date(),
+      lastmodrealtime: true
+    }
+  },
 
   /*
    ** Build configuration

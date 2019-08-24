@@ -45,6 +45,21 @@ export default {
       merchandise: 'merchandise'
     }
   },
+  form: {
+    email: 'Email',
+    full_name: 'Nama',
+    phone: 'No Telp',
+    message: 'Pesan',
+    product: 'Produk yang dipesan',
+    numbers: 'Jumlah',
+    address: 'Alamat',
+    additional: 'Keterangan Tambahan',
+    alert_buy: 'Pesanan Anda akan segera di proses',
+    notification_title: 'Ada pesan dari Pulau Plastik',
+    notification_text: 'Pesanan Anda akan segera diproses. Terima kasih telah turut mendukung kampanye Pulau Plastik',
+    buying_form: 'Form Pemesanan',
+    send: 'Kirim'
+  },
   content: {
     button: {
       text: {
@@ -63,13 +78,11 @@ export default {
       title_1: 'Produk Ramah Lingkungan',
       description_text_1: 'Menemukan alternatif produk yang ramah lingkungan dengan harga terjangkau bisa menjadi tantangan tersendiri. Di sini, tim kami menyusun daftar vendor yang memasok produk ramah lingkungan dengan harga terjangkau. Daftar ini dapat berguna bagiadalah untuk kalian yang ingin mulai belajar gaya hidup minim sampah dan juga untuk pemilik restoran dan hotel yang ingin mengadopsi prinsip bebas sampah ke dalam bisnis mereka.',
       description_text_2: 'Berikut ini adalah pilihan alternatif yang lebih ramah lingkungan dibandingkan dengan barang plastik sekali pakai, beserta informasi vendornya. Kamu dapat menghubungi vendor secara langsung jika tertarik untuk membeli.',
-      description_text_3: 'Jika kamu ingin bisnismu ditampilkan di halaman ini, silahkan hubungi kami melalui pulauplastik@kopernik.info dengan judul email: Website_Vendor_ [nama vendor] _ [tanggal].'
+      description_text_3: 'Jika kamu ingin bisnismu ditampilkan di halaman ini, silahkan hubungi kami melalui pulauplastik@kopernik.info dengan judul email: Website _ [nama vendor] _ [tanggal].'
     },
     merchandise: {
       title: 'Produk Bebas Plastik Sekali Pakai',
-      description_text_1: 'Pilih produk favoritmu dan isi formulir',
-      description_text_2: 'Tuliskan nama produk dan jumlah yang diinginkan. Setelah kami menerima formulir pesananmu, kami akan mengirimkan informasi pembayaran dan mengirimkan pasananmu sesegera mungkin.',
-      link_1: 'ini.',
+      description_text_1: 'Pilih produk favoritmu, tuliskan nama produk dan jumlah yang diinginkan. Setelah kami menerima formulir pemesanan, kami akan mengirimkan informasi cara pembayaran dan mengirimkan pesananamu sesegera mungkin.'
     },
     footer: {
       description: 'Pulau Plastik is a collaborative action between Kopernik and Akarumput.',
@@ -105,14 +118,10 @@ export default {
       },
       series: {
         pre_text: 'Pulau Plastik memproduksi 4 (empat) episode untuk meningkatkan wawasan serta pengetahuan masyarakat Bali terhadap dampak buruk plastik sekali pakai. Tiap episodenya berdurasi 20 menit dan mencakup isu seputar plastik sekali pakai, seperti: mikroplastik, pemilahan dan pembuangan sampah rumah tangga, kebijakan pemerintah, serta industri pangan dan perhotelan. Hubungan filosofi dan kepercayaan masyarakat Bali turut dibahas dalam kaitannya dengan plastik sekali pakai. Tiap episodenya menyajikan rekomendasi yang realistis serta mengajak para pemirsanya untuk mengurangi penggunaan plastik sekali pakai.',
-        series_title_1: 'Samudra Kertih (Dalam Harmoni dengan Laut Kita)',
-        series_description_1: 'Plastik telah mengontaminasi lingkungan alam di seluruh dunia. Di berbagai komunitas di pesisir-pesisir Indonesia, kami menyelidiki bagaimana mikroplastik telah memasuki rantai makanan kita lewat hidangan laut yang kita makan. Mikroplastik tidak hanya terurai melalui produk plastik yang kita gunakan, tetapi mikroplastik juga terurai lewat produk-produk yang mengandung microbeads. Apakah yang dapat dilakukan oleh perusahaan-perusahaan untuk lebih mengutamakan kehidupan keberlanjutan dan memprioritaskan planet bumi ketimbang profit?',
-        series_title_2: 'Karmaphala (Konsekuensi dari Aksi Kita)',
-        series_description_2: 'Episode ini menyelidiki bagaimana budaya konsumtif memproduksi jumlah sampah plastik yang sangat banyak serta mengenalkan pentingnya pemilahan sampah pada level rumah tangga atau desa.Aksi individual dapat memberikan dampak berkelanjutan, terutama di tempat-tempat dengan infrastruktur pembuangan sampah yang kurang memadai. Apakah yang dapat kita lakukan untuk mengurangi volume sampah yang berakhir di TPA Bali?',
-        series_title_3: 'Bedawang Nala (Penyu yang Memunggungi Dunia)',
-        series_description_3: 'Tergolong sebagai hewan langka di Bali dan di seluruh dunia, keberlangsungan hidup penyu sedang diancam oleh limbah plastik yang memasuki laut. Bahkan satu buah plastik dapat membunuh seekor penyu. Dalam episode ini, kami mengunjungi restoran bebas sampah pertama  di Indonesia serta menyelidiki alternatif plastik untuk kemasan makanan. Bagaimana solusi bebas sampah ini dapat diaplikasikan di kios-kios serta rumah makan? Bisakah mereka mengimplementasikan sebuah sistem yang bebas-sampah?',
-        series_title_4: 'Tri Hita Karana (Hubungan antara Manusia, Tuhan, dan Alam)',
-        series_description_4: 'Bali merupakan pulau suci yang dikenal oleh seluruh dunia sebagai ‘Pulau Dewata’, dan tidak ada tempat yang lebih keramat di Bali dibandingkan dengan ibu bagi para pura, yaitu Pura Besakih. Dalam episode ini, ribuan kaum muda Bali berkumpul untuk menangani pencemaran plastik di Pura Besakih. Bisakah ibu bagi para pura di Bali dibebaskan dari plastik dan menjadi inspirasi bagi pura-pura lainnya di Bali untuk dijadikan contoh?'
+        text_1: 'Bagi kalian yang tertarik untuk menonton episode serial ini, kalian dapat mengajukan ',
+        text_2: 'pemutaran',
+        text_3: 'secara mandiri.'
+
       }
     },
     screenings: {
@@ -132,8 +141,8 @@ export default {
       }
     },
     contact: {
-      email: 'Alamat Email',
-      full_name: 'Nama Lengkap',
+      email: 'Email',
+      full_name: 'Nama',
       phone: 'No Telp',
       message: 'Pesan',
     },
@@ -152,12 +161,12 @@ export default {
         problem_text_4: 'Tim kami akan menghubungimu sesaat lagi dan memberikan akses terhadap materi yang kamu butuhkan untuk menyelenggarakan pemutaran!'
       },
       application_form: {
-        message: 'Kami akan segera mengirimkan Screening Kit Pulau Plastik ke email-mu. Materi tersebut dapat kamu gunakan untuk membantumu dalam kegiatan pemutaran film.',
+        message: 'Kami akan segera mengirimkan Screening Kit Pulau Plastik ke email-mu. Materi tersebut dapat digunakan untuk membantu dalam kegiatan pemutaran dan diskusi film.',
         contact_message: 'Terimakasih telah menghubungi kami',
         title: 'Isi Formulir Pendaftaran',
         description_text_1: 'Ceritakan kepada kami sedikit tentangmu dan mengapa kamu tertarik untuk mengadakan pemutaran Pulau Plastik.',
-        text_label_1: "Nama Lengkap",
-        text_label_2: "Alamat Email",
+        text_label_1: "Nama",
+        text_label_2: "Email",
         text_label_3: "No Telp",
         text_label_4: "Komunitas/Institusi",
         text_label_5: "Saya menyelenggarakan pemutaran sebagai",
@@ -169,15 +178,15 @@ export default {
         text_label_11: 'Kisaran usia penonton',
         text_label_12: 'Deskripsi kegiatan',
         text_label_13: 'Episode yang diinginkan',
-        text_label_14: 'Bagaimana kamu tahu tentang Pulau Plastik:',
-        text_label_15: 'Apakah ada hal lain yang ingin kamu sampaikan?',
+        text_label_14: 'Bagaimana Anda tahu tentang Pulau Plastik:',
+        text_label_15: 'Apakah ada hal lain yang ingin kamu sampaikan:',
         dropdown_1: 'Individu',
         dropdown_2: 'Organisasi Non-profit',
         dropdown_3: 'Sekolah/Universitas',
         dropdown_4: 'Organisasi kepemudaan/Karang Taruna',
         dropdown_5: 'Bisnis',
         dropdown_6: 'Lain-lain',
-        dropdown_7: 'Samudra Kertih (Dalam Harmoni dengan Laut Kita)',
+        dropdown_7: 'Samudra Kertih (Harmoni dengan Laut Kita)',
         dropdown_8: 'Karmaphala (Konsekuensi dari Perbuatan Kita)',
         dropdown_9: 'Bedawang Nala (Penyu yang Membawa Dunia)',
         dropdown_10: 'Tri Hita Karana (Hubungan antara Manusia, Tuhan, dan Alam)'
