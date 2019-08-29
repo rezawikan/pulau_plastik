@@ -16,7 +16,7 @@
       </b-row>
     </b-container>
 
-    <b-container class="p-3 mt-3">
+    <b-container class="p-3 my-3">
       <b-row align-h="center">
         <b-col cols="12">
           <p>{{ $t('content.screenings.upcoming')}}</p>
