@@ -27,6 +27,7 @@
     "nuxt": "^2.8.1",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-i18n": "^6.0.1",
+    "nuxt-validate": "^1.0.1",
     "query-string": "^6.8.2",
     "sass-loader": "^7.2.0",
     "vue-carousel": "^0.18.0",

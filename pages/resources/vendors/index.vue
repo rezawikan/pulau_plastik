@@ -23,7 +23,7 @@
           <p class="header-text">{{ $t('content.vendors.title_1')}}</p>
           <p>{{ $t('content.vendors.description_text_1')}}</p>
           <p>{{ $t('content.vendors.description_text_2')}}</p>
-          <p>{{ $t('content.vendors.description_text_3')}}</p>
+          <p>{{ $t('content.vendors.description_text_3')}}<br>{{ $t('content.vendors.description_text_4')}}</p>
         </b-col>
       </b-row>
     </b-container>

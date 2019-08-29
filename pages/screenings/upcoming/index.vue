@@ -19,13 +19,13 @@
     <b-container class="p-3 mt-3">
       <b-row align-h="center">
         <b-col cols="12">
-          <p>{{ $t('content.screenings.upcomming')}}</p>
+          <p>{{ $t('content.screenings.upcoming')}}</p>
         </b-col>
-        <b-col cols="12" v-for="(comming, index) in upcomming" :key="index">
+        <b-col cols="12" v-for="(coming, index) in upcoming" :key="index">
           <div class="container-block-line">
-            <p class="list-title-text">{{ comming.title }}</p>
-            <p class="address">{{ comming.location }}</p>
-            <p class="date">{{ comming.date }}</p>
+            <p class="list-title-text">{{ coming.title }}</p>
+            <p class="address">{{ coming.location }}</p>
+            <p class="date">{{ coming.date }}</p>
           </div>
         </b-col>
       </b-row>
@@ -42,7 +42,7 @@ export default {
     return {
       title: `Pulau Plastik - ${ this.$t('pages.sub.upcoming')}`,
       meta: [
-        { hid: 'description', name: 'description', content: `${ this.$t('content.screenings.upcomming')}` },
+        { hid: 'description', name: 'description', content: `${ this.$t('content.screenings.upcoming')}` },
         {
           property: 'og:title',
           content:  `Pulau Plastik - ${ this.$t('pages.sub.upcoming')}`,
@@ -50,7 +50,7 @@ export default {
         },
         {
           property: 'og:description',
-          content:  `${ this.$t('content.screenings.upcomming')}`,
+          content:  `${ this.$t('content.screenings.upcoming')}`,
           vmid: 'og:description'
         },
         {
@@ -64,7 +64,7 @@ export default {
 
   data() {
       return {
-        upcomming: [],
+        upcoming: [],
         meta: []
       }
   },
@@ -75,7 +75,7 @@ export default {
     })
     let { data, meta } = await $axios.$get(`/api/upcomming?${queryString.stringify({ ...queries })}`)
     return {
-      upcomming: data,
+      upcoming: data,
       meta: meta
     }
   }

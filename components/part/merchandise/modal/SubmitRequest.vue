@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-    <p class="text-right"><a href="" class="btn-custom" @click.prevent="showModal">Beli</a></p>
+    <p class="text-right"><a href="" class="btn-custom" @click.prevent="showModal">{{ $t('content.button.text.buy_product')}}</a></p>
     <b-modal :ref="index" :title="`${ $t('form.buying_form')}`" hide-footer>
       <b-form-group :label="`${ $t('form.full_name') }`">
         <b-form-input v-model="form.fullName" required></b-form-input>

@@ -24,6 +24,7 @@ $primary-blue: #4c8981;
 $option-blue-one: #4C8981;
 $border: #E6E6FA;
 $white: white;
+$red : #721c24;
 
 body {
   font-family: 'ProximaNovaReg', sans-serif;
@@ -75,6 +76,12 @@ ul {
 
 img {
   width: 100%;
+}
+
+.alert-style {
+  color: #721c24;
+  text-transform: lowercase;
+  font-size: .7em;
 }
 
 .page-link {
@@ -529,27 +536,30 @@ img {
   margin: 0.5em 0;
   border: 1px solid $border;
   transition: 1s;
+  height: 100%;
 
   &:hover {
-    -webkit-box-shadow: inset 0 0 1px 1px $primary-blue;
-    -moz-box-shadow: inset 0 0 1px 1px $primary-blue;
-    box-shadow: inset 0 0 1px 1px $primary-blue;
+    // -webkit-box-shadow: inset 0 0 1px 1px $primary-blue;
+    // -moz-box-shadow: inset 0 0 1px 1px $primary-blue;
+    // box-shadow: inset 0 0 1px 1px $primary-blue;
     cursor: pointer;
+    border: 1px solid $primary-blue;
   }
 }
 
 .container-block-line-media {
+  height: 100%;
   margin: 0;
   padding: 20px;
   border: 1px solid $border;
   transition: 1s;
 
   &:hover {
-    -webkit-box-shadow: 0 0 0.5px 0.5px $primary-blue;
-    -moz-box-shadow: 0 0 0.5px 0.5px $primary-blue;
-    box-shadow: 0 0 0.5px 0.5px $primary-blue;
+    // -webkit-box-shadow: 0 0 0.5px 0.5px $primary-blue;
+    // -moz-box-shadow: 0 0 0.5px 0.5px $primary-blue;
+    // box-shadow: 0 0 0.5px 0.5px $primary-blue;
     cursor: pointer;
-    border: 1px solid transparent;
+    border: 1px solid $primary-blue;
   }
 
   img {
@@ -584,16 +594,17 @@ img {
 }
 
 .container-block-line-thumb {
-  margin: 0.7em 0;
+  // margin: 0.7em 0;
   border: 1px solid $border;
   transition: 1s;
+  height: 100%;
 
   &:hover {
-    -webkit-box-shadow: 0 0 0.5px 0.5px $primary-blue;
-    -moz-box-shadow: 0 0 0.5px 0.5px $primary-blue;
-    box-shadow: 0 0 0.5px 0.5px $primary-blue;
+    // -webkit-box-shadow: 0 0 0.5px 0.5px $primary-blue;
+    // -moz-box-shadow: 0 0 0.5px 0.5px $primary-blue;
+    // box-shadow: 0 0 0.5px 0.5px $primary-blue;
     cursor: pointer;
-    border: 1px solid transparent;
+    border: 1px solid $primary-blue;
   }
 
   img {

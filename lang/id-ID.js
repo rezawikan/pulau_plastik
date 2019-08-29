@@ -21,7 +21,7 @@ export default {
     resources: 'Sumber Data',
     contact: 'Hubungi Kami',
     sub: {
-      overview: 'Kampanye',
+      campaign: 'Kampanye',
       sponsors: 'Dukungan',
       insta_post: 'Instagram Live Post',
       support_our_cause: 'Dukung gerakan kami',
@@ -67,18 +67,20 @@ export default {
         schools: 'Sekolah',
         villages: 'Desa/Banjar',
         households: 'Rumah Tangga',
-        bussiness: 'Bisnis (Perkantoran/Restoran)',
+        business: 'Bisnis (Perkantoran/Restoran)',
         donate: 'Donasi',
         buy: 'Merchandise',
         learn_more: 'Pelajari lebih lanjut',
         watch_more: 'Lihat lebih lanjut',
+        buy_product: 'Buy'
       }
     },
     vendors: {
       title_1: 'Produk Ramah Lingkungan',
       description_text_1: 'Menemukan alternatif produk yang ramah lingkungan dengan harga terjangkau bisa menjadi tantangan tersendiri. Di sini, tim kami menyusun daftar vendor yang memasok produk ramah lingkungan dengan harga terjangkau. Daftar ini dapat berguna bagiadalah untuk kalian yang ingin mulai belajar gaya hidup minim sampah dan juga untuk pemilik restoran dan hotel yang ingin mengadopsi prinsip bebas sampah ke dalam bisnis mereka.',
       description_text_2: 'Berikut ini adalah pilihan alternatif yang lebih ramah lingkungan dibandingkan dengan barang plastik sekali pakai, beserta informasi vendornya. Kamu dapat menghubungi vendor secara langsung jika tertarik untuk membeli.',
-      description_text_3: 'Jika kamu ingin bisnismu ditampilkan di halaman ini, silahkan hubungi kami melalui pulauplastik@kopernik.info dengan judul email: Website _ [nama vendor] _ [tanggal].'
+      description_text_3: 'Jika kamu ingin bisnismu ditampilkan di halaman ini, silahkan hubungi kami melalui:',
+      description_text_4: 'pulauplastik@kopernik.info dengan judul email: Website _ [nama vendor] _ [tanggal].'
     },
     merchandise: {
       title: 'Produk Bebas Plastik Sekali Pakai',
@@ -94,8 +96,7 @@ export default {
       testimonies: 'Testimoni',
       instagram: 'Instagram Live Posts',
       map: 'Peta Pemutaran Pulau Plastik',
-      empty: 'Konten masih kosong, silahkan kembali di lain waktu',
-      comming_soon: 'Segera Tayang'
+      empty: 'Konten masih kosong, silahkan kembali di lain waktu'
     },
     home: {
       description_text_1: 'Pulau Plastik merupakan kampanye kolaboratif dalam menangani isu plastik sekali pakai di Bali dan sekitarnya. Pulau Plastik memanfaatkan budaya populer berupa kampanye media sosial, serial video pendek, dan film dokumenter untuk  meningkatkan kesadaran masyarakat tentang bahaya plastik sekali pakai, serta mengubah perilaku masyarakat, sekaligus mengadvokasi menuju perubahan yang berkelanjutan.',
@@ -125,7 +126,7 @@ export default {
       }
     },
     screenings: {
-      upcomming: 'Mari menjadi bagian dari solusi! Hadiri acara pemutaran film selanjutnya!'
+      upcoming: 'Mari menjadi bagian dari solusi! Hadiri acara pemutaran film selanjutnya!'
     },
     resources: {
       take_action: {
@@ -163,6 +164,7 @@ export default {
       application_form: {
         message: 'Kami akan segera mengirimkan Screening Kit Pulau Plastik ke email-mu. Materi tersebut dapat digunakan untuk membantu dalam kegiatan pemutaran dan diskusi film.',
         contact_message: 'Terimakasih telah menghubungi kami',
+        contact_message_error: 'Ada yang salah',
         title: 'Isi Formulir Pendaftaran',
         description_text_1: 'Ceritakan kepada kami sedikit tentangmu dan mengapa kamu tertarik untuk mengadakan pemutaran Pulau Plastik.',
         text_label_1: "Nama",

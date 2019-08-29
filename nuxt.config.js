@@ -96,9 +96,13 @@ export default {
         },
         {
           set: '@fortawesome/free-brands-svg-icons',
-          icons: ['faFacebookF', 'faYoutube', 'faInstagram']
+          icons: ['faFacebookF', 'faYoutube', 'faInstagram', 'faTwitter']
         }
       ]
+    }],
+    ['nuxt-validate', {
+      lang: 'id',
+      nuxti18n: true
     }],
     ['nuxt-i18n', {
       locales: [{
@@ -120,10 +124,10 @@ export default {
       defaultLocale: 'id',
       langDir: 'lang/',
       defaultLocaleRouteNameSuffix: 'default',
-      // detectBrowserLanguage: {
-      //   useCookie: true,
-      //   cookieKey: 'pulau_plastik_cookie'
-      // },
+      detectBrowserLanguage: {
+        useCookie: true,
+        cookieKey: 'pulau_plastik_cookie'
+      },
       // By default a store module is registered and kept in sync with the
       // app's i18n current state
       // Set to false to disable
@@ -150,8 +154,8 @@ export default {
         //   en: '/about/team',
         //   id: '/tentang/tim',
         // },
-        'about/overview/index': {
-          en: '/about/overview',
+        'about/campaign/index': {
+          en: '/about/campaign',
           id: '/tentang/kampanye',
         },
         'about/partners/index': {
@@ -195,7 +199,7 @@ export default {
         //   id: '/sumber/beraksi',
         // },
         'screenings/organize/index': {
-          en: '/screenings/organize',
+          en: '/screenings/organize-a-screening',
           id: '/pemutaran/selenggarakan-pemutaran',
         },
         // 'screenings/past-screenings/index': {

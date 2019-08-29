@@ -13,7 +13,7 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="mc-auto">
-            <b-nav-item class="ml-1 mr-3" :href="localePath('about-overview')">{{ $t('pages.about') }}</b-nav-item>
+            <b-nav-item class="ml-1 mr-3" :href="localePath('about-campaign')">{{ $t('pages.about') }}</b-nav-item>
             <b-nav-item class="ml-1 mr-3" :href="localePath('screenings-upcoming')">{{ $t('pages.screenings') }}</b-nav-item>
             <b-nav-item class="ml-1 mr-3" :href="localePath('news-media-coverage')">{{ $t('pages.news') }}</b-nav-item>
             <b-nav-item class="ml-1 mr-3" :href="localePath('resources-research')">{{ $t('pages.resources') }}</b-nav-item>
@@ -22,7 +22,7 @@
 
           <!-- Right aligned nav items // Switch Lang -->
 
-            <!-- <b-navbar-nav class="ml-right">
+            <b-navbar-nav class="ml-right">
               <b-nav-item
                 v-for="locale in availableLocales"
                 :key="locale.code"
@@ -30,7 +30,7 @@
                  class="ml-1 mr-3">
                   {{ locale.name }}
               </b-nav-item>
-            </b-navbar-nav > -->
+            </b-navbar-nav >
 
         </b-collapse>
       </b-navbar>

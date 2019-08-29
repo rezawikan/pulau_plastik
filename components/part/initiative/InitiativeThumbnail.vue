@@ -1,8 +1,8 @@
 <template lang="html">
-  <b-container class="p-3 mt-3">
-    <b-row align-v="center" v-if="data.length > 0">
-      <b-col cols="12" sm="6" md="4" lg="4" v-for="(blog, index) in data" :key="index" >
-        <div class="container-block-line-media mb-3">
+  <b-container class="mt-3">
+    <b-row v-if="data.length > 0">
+      <b-col class="mb-2 p-2" cols="12" sm="6" md="4" lg="4" v-for="(blog, index) in data" :key="index" >
+        <div class="container-block-line-media">
           <a :href="blog.link" target="_blank">
             <div class="picture">
               <img :src="blog.image" :alt="blog.title">
@@ -20,7 +20,9 @@
     </b-row>
     <b-row align-v="center" v-if="data.length == 0">
       <b-col cols="12" >
-        <p>{{ $t('content.general.empty') }}</p>
+        <div class="container-block-line-media">
+          <p>{{ $t('content.general.empty') }}</p>
+        </div>
       </b-col>
     </b-row>
   </b-container>

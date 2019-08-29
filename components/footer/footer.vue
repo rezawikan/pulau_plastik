@@ -18,6 +18,11 @@
                 </a>
               </li>
               <li>
+                <a href="https://www.instagram.com/pulauplastik/" target="_blank">
+                  <fa :icon="['fab', 'twitter']" :style="{ color: 'white', fontSize: '2em' }" />
+                </a>
+              </li>
+              <li>
                 <a href="https://www.youtube.com/channel/UCZ8v9tyreRJPOBjYrgLDHaw" target="_blank">
                   <fa :icon="['fab', 'youtube']" :style="{ color: 'white', fontSize: '2em' }" />
                 </a>
@@ -36,7 +41,7 @@
           <h6 class="text-center" style="padding-top:20px;">Menu</h6>
           <div class="footer-nav text-center">
             <ul>
-              <li><a :href="localePath('about-overview')">{{ $t('pages.about')}}</a></li>
+              <li><a :href="localePath('about-campaign')">{{ $t('pages.about')}}</a></li>
               <li><a :href="localePath('screenings-upcoming')">{{ $t('pages.screenings')}}</a></li>
               <li><a :href="localePath('news-blog')">{{ $t('pages.news')}}</a></li>
               <li><a :href="localePath('resources-research')">{{ $t('pages.resources')}}</a></li>

@@ -5,7 +5,7 @@
       <b-col col lg="7" md="9" sm="11">
         <p>{{ $t('content.home.description_text_1')}}</p>
         <p>{{ $t('content.home.description_text_2')}}</p>
-        <p><nuxt-link :to="localePath('about-overview')" class="btn btn-custom-second">{{ $t('content.button.text.learn_more')}}</nuxt-link></p>
+        <p><nuxt-link :to="localePath('about-campaign')" class="btn btn-custom-second">{{ $t('content.button.text.learn_more')}}</nuxt-link></p>
       </b-col>
     </b-row>
   </b-container>
@@ -61,7 +61,7 @@
       <b-col cols="12" class="pb-3">
         <h6 class="text-center">{{ $t('content.general.instagram')}}</h6>
       </b-col>
-      <b-col cols="6" sm="6" md="4" lg="4" v-for="(data, index) in instagram" :key="index">
+      <b-col class="mb-1 p-2" cols="6" sm="6" md="4" lg="4" v-for="(data, index) in instagram" :key="index">
         <div class="container-block-line-thumb">
           <a :href="data.link" target="_blank">
             <img :src="data.images.standard_resolution.url" :alt="data.caption.text">
