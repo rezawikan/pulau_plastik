@@ -21,7 +21,7 @@
         <b-col cols="12">
           <p>{{ $t('content.screenings.upcoming')}}</p>
         </b-col>
-        <b-col cols="12" v-for="(coming, index) in upcoming" :key="index">
+        <b-col class="py-2" cols="12" v-for="(coming, index) in upcoming" :key="index">
           <div class="container-block-line">
             <p class="list-title-text">{{ coming.title }}</p>
             <p class="address">{{ coming.location }}</p>
