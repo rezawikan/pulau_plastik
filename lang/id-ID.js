@@ -37,7 +37,7 @@ export default {
       initiatives: 'Inisiatif',
       application_form: 'Application Form',
       blog: 'Blog',
-      media_coverage: 'Publikasi',
+      media_coverage: 'Liputan Media',
       gallery: 'Galeri Foto',
       take_action: 'Mulai aksimu',
       vendors: 'Produk Alternatif',

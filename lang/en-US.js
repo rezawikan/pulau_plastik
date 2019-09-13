@@ -37,7 +37,7 @@ export default {
       initiatives: 'Initiatives',
       application_form: 'Application Form',
       blog: 'Blog',
-      media_coverage: 'Publication',
+      media_coverage: 'Media Coverage',
       gallery: 'Gallery',
       take_action: 'Take Action',
       vendors: 'Vendors',
