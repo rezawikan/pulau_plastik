@@ -18,7 +18,7 @@
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/pulauplastik/" target="_blank">
+                <a href="https://twitter.com/pulauplastik" target="_blank">
                   <fa :icon="['fab', 'twitter']" :style="{ color: 'white', fontSize: '2em' }" />
                 </a>
               </li>
