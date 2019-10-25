@@ -45,7 +45,7 @@ export default {
 
   proxy: {
     '/api': {
-      target: 'https://api.pulauplastik.org/api/',
+      target: 'https://deploy.pulauplastik.org/api/',
       pathRewrite: {
         '^/api/': ''
       },
