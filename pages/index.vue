@@ -10,6 +10,14 @@
     </b-row>
   </b-container>
 
+  <b-container fluid  class="p-0">
+      <b-row align-h="center" no-gutters>
+        <b-col>
+          <img src="~/assets/img/event_header.jpg" class="" alt="">
+        </b-col>
+      </b-row>
+    </b-container>
+
   <section class="trailer">
     <iframe src="https://www.youtube.com/embed/4xUAUWcPq74?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </section>
